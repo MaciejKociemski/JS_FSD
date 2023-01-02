@@ -1,4 +1,8 @@
-const myName = "Maciek"
+const myName = "to jest jeden z pierwszych skryptów"
 console.log(myName);
-console.log(myName);
+
+
+
+
+
 
