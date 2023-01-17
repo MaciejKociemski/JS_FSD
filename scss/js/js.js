@@ -873,7 +873,344 @@ console.log(arr.concat([1,2,3,4]));
 
 
 console.log([1,2,3]!==[1,2,3]);
+console.log([1,2,3]!==[1,2,3]);
 
 // zajęcia 4  FUNKCJE
+
+//button dodający cos do htmla 
+function areaArraysEqual(){};
+
+ const container = document.getElementById("container");
+ const button = document.getElementById("header__btn");
+ const button2 = document.getElementById("header__btn");
+
+ button.addEventListener(`click`,function(){
+  console.log("dodaje element...",Date.now());
+ });
+//
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  // Change code below this line
+
+  let message;
+
+  if (password === ADMIN_PASSWORD) {
+    message = "Welcome!";
+  } else {
+    message = "Access denied, wrong password!";
+  }
+
+  return message;
+  // Change code above this line
+}
+
+
+
+console.log(checkPassword("jqueryismyjam"));
+console.log(checkPassword(" "));
+
+
+
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  // Change code below this line
+
+  if (password === ADMIN_PASSWORD) {
+    return ("Welcome!");
+  
+  }
+  return ("Access denied, wrong password!");
+  };
+  
+
+  // Change code above this line
+
+console.log(checkPassword("mangohackzor"));
+console.log(checkPassword("dasda"));
+console.log(checkPassword("jqueryismyjam"));
+
+
+
+
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"]
+// },
+  
+//   owner = {
+//   name: "Henry",
+//   phone: "982-126-1588",
+//   email:"henry.carter@aptmail.com",
+// };
+    
+// console.log(apartment);
+// console.log(owner);
+
+
+
+
+function checkStorage(available, ordered) {
+  // Change code below this line
+  let message;
+
+  if (ordered === 0) {
+    return "Your order is empty!";
+  } 
+  if (ordered > available) {
+    return "Your order is too large, not enough goods in stock!";
+  } 
+  if (ordered<available){
+  return "The order is accepted, our manager will contact you";
+  }
+}
+  
+  // Change code above this line
+
+console.log(checkStorage(100,50));
+console.log(checkStorage(100,130));
+console.log(checkStorage(70,0));
+console.log(checkStorage(200,20));
+console.log(checkStorage(200,250));
+console.log(checkStorage(150,0));
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+
+
+
+
+
+const fruits = ["apple", "plum", "pear", "orange"];
+console.log(fruits[2]);
+
+
+const name = "Mango";
+console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+
+
+
+for (let i = 1; i < 4; i++) {
+  console.log("Ala ma kota");
+}
+console.log("Ala ma kota");
+
+
+
+
+for (let i = 1; i < 4; i++) {
+  console.log("Ala ma kota");
+}
+
+
+
+
+function calculateTotalPrice(order) {
+  let total = 0;
+  // Change code below this line
+for (let i = 0; i <= order.length; i+= 1) {
+  total += i;
+                             }
+  // Change code above this line
+  return total
+}
+
+console.log(calculateTotalPrice(12,85,37,4));
+
+
+
+
+const planets=["Earth","Mars","Venus"];
+planets.push("JUPITER");
+planets.push("Saturn","Uranus","Neptune");
+console.log(planets);
+
+
+console.log(planets.includes("Earth"))
+
+
+function checkFruit(fruit) {
+  const fruits=["apple","plum","pear","orange"];
+console.log(fruits.includes(fruit));
+  return;
+}
+
+console.log(checkFruit("apple"))
+console.log(checkFruit("apple"))
+console.log(checkFruit("apple"))
+console.log(checkFruit("aple"))
+
+const a=12%7;
+console.log(a)
+
+
+
+function getEvenNumbers(start, end){getEvenNumbers(2,5)}
+
+
+let people={name:"Jacek",yearsOld:20,city:"Poznan"}
+console.log(people)
+
+for(let objectItem in people){console.log(people[objectItem])};
+for(let objectItem in people){console.log(objectItem)};
+
+for(let objectItem in people){console.log((objectItem),people[objectItem])};
+
+
+
+
+
+
+const apartment = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+
+}
+let owner =  {
+  name: "Henry",
+  phone: "982-126-1588",
+  email: "henry.carter@aptmail.com",
+}
+
+
+console.log(apartment);
+console.log(owner,apartment);
+
+
+const book = {
+  title: "Ostatnie królestwo",
+  author: "Bernard Cornwell",
+  genres: ["proza ​​historyczna", "przygody"],
+  public: true,
+  rating: 8.38,
+};
+
+console.log(book);
+
+
+const user = {
+  name: "Jacques Gluke",
+  tag: "jgluke",
+  location: {
+    country: "Jamaica",
+    city: "Ocho Rios",
+  },
+  stats: {followers: 5603,
+    views: 4827,
+    likes: 1308,
+
+  },};
+  console.log(user);
+
+
+
+  const apartment2 = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+  
+  owner: {
+    name: "Henry",
+    phone: "982-126-1588",
+    email: "henry.carter@aptmail.com",
+
+  other: {
+    color: "Black",
+    surname: "podpolski",
+  }
+  },
+    };
+  
+    console.log(apartment2);
+
+  
+
+    const book2 = {
+      title: "Ostatnie królestwo",
+      author: "Bernard Cornwell",
+      genres: ["proza ​​historyczna", "przygody"],
+      public: true,
+      rating: 8.38,
+    };
+    
+    const bookTitle = book2.title;
+    console.log(bookTitle); // "Ostatnie królestwo"
+    
+    const bookGenres = book2.genres;
+    console.log(bookGenres); // ["proza ​​historyczna", "przygody"]
+
+
+
+    const apartment3 = {
+      imgUrl: "https://via.placeholder.com/640x480",
+      descr: "Spacious apartment in the city center",
+      rating: 4,
+      price: 2153,
+      tags: ["premium", "promoted", "top"],
+      owner: {
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com",
+      },
+    };
+    
+    // Change code below this line
+    const ownerName = apartment3.name;
+    const ownerPhone = apartment3.phone;
+    const ownerEmail = apartment3.email;
+    const numberOfTags = apartment3;
+    const firstTag = apartment3;
+    const lastTag = apartment3.tags;
+    // Change code above this line
+    
+
+    console.log(ownerName);
+
+
+    var string="Witaj worldzie";
+    console.log(string.length)
+
+    const apartment4 = {
+      imgUrl: "https://via.placeholder.com/640x480",
+      descr: "Spacious apartment in the city center",
+      rating: 4,
+      price: 2153,
+      tags: ["premium", "promoted", "top"],
+      owner: {
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com",
+      },
+    };
+    
+    // Change code below this line
+    apartment4.tags.push(["premium", "promoted", "top", "trusted"]),
+    apartment4.rating = 7.7,
+   apartment4.price= 5000,
+    // apartment.name.push("Henry Sibola");
+
+console.log(apartment4);
+
+const person = {};
+const person2 = new Object();
+
+
+
+
 
 
