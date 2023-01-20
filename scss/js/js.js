@@ -1025,7 +1025,7 @@ for (let i = 0; i <= order.length; i+= 1) {
   return total
 }
 
-console.log(calculateTotalPrice(12,85,37,4));
+// console.log(calculateTotalPrice(12,85,37,4));
 
 
 
@@ -1206,11 +1206,351 @@ const user = {
 
 console.log(apartment4);
 
-const person = {};
+const person = {
+  name: 'Jakub',
+  lastName: 'Buskiewicz',
+  skills:[],
+  learn(skill) {
+    person.skills.push(skill);
+  }
+};
 const person2 = new Object();
 
 
 
 
 
+let test="tekst";
+console.log(test);
 
+test.concat("jaja");
+console.log(test);
+
+
+const name2 = "Repair Droid";
+const price = 2500;
+const image = "https://via.placeholder.com/640x480";
+const tags = ["on sale", "trending", "best buy"];
+
+const product = {name2,
+                 price,
+                 tags,
+                 image 
+                };
+  
+console.log(product);
+
+
+
+
+// zjaecia wtorek 17 
+
+
+const init = (id, name) => ({id, name});
+const editUserName = (oldUser, name) => ({...oldUser, name});
+
+
+
+// ✅ Logicznie i syntaktycznie pogrupowane encje
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian"],
+
+  getBooks() {
+    console.log(this.books);
+  },
+
+  addBook(bookName) {
+    console.log("Ta metoda doda nową książkę do właściwości books");
+  },
+};
+
+// Wywołania metod
+bookShelf.getBooks();
+bookShelf.addBook("Nowa książka");
+let user2=init(1,"Maggie");
+let user3 = editUserName(user2, "Maggie Wesolowska");
+
+
+user2
+console.log(user2);
+console.log(user3);
+
+console.log(user2,user3);
+editUserName;
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "Sen śmiesznego człowieka",
+    author: "Fiodor Dostojewski",
+    rating: 7.75,
+  },
+];
+
+
+let totalRating = 0;
+
+for (const book of books) {
+  totalRating += book.rating;
+}
+const averageRating = (totalRating / books.length).toFixed(1);
+console.log(averageRating);
+
+console.log(book.title)
+
+
+
+
+const o={
+  a:1,
+  b:2,
+  c:3};
+
+const name5="c"
+console.log(o[name5]);
+console.log(o["a"]);
+console.log(o["b"]);
+console.log(o["c"]);
+
+console.log(person2.age)
+
+
+
+
+
+
+function sumNumbers(a,b, ...args){
+  let sum = a+b;
+  for(const number of args) sum += number;
+  return sum;
+  console.log(args);
+}
+console.log(sumNumbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14));
+
+
+
+function countProps(object){
+  let propCount =0;
+  for (let key in object ){
+    if(object.hasOwnProperty(key)){
+      console.log(key);
+      console.log(countProps[key])
+    }
+  }
+
+  return propCount++;
+}
+console.log(countProps({}));
+console.log(countProps({name:"Maciek",age:50}));
+
+const prolet = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+  
+let newElement=null
+  for(const product of products){
+    if(productName === product.name){
+      newElement = product.price;
+    }
+  }
+
+return newElement;
+
+}
+
+
+
+//mod 3 19/41
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+ 
+// let newArr = []
+//   for(let product of products){
+//     if(product[propName]) {
+//       newArr.push(product[propName]);
+//     }
+//   }
+
+// return newArr
+  
+// }
+
+
+
+//mod 3 20/41
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function calculateTotalPrice(productName) {
+for(let item of products)
+  if(item.name === productName){
+    return item.price * item.quantity
+  }
+
+return 0
+}
+
+//mod 3 21/41
+
+const highTemperatures3 = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+
+const {yesterday3, today3, tomorrow3} = highTemperatures3;
+const meanTemperature3 = (yesterday3 + today3 + tomorrow3) / 3;
+
+
+//mod 3 22/41
+
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+// Change code below this line
+
+const {yesterday, today, tomorrow, icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
+
+
+// Change code above this line
+const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+
+//mod 3 23/41
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+
+// const {yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
+
+
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+// console.log(highTemperatures)
+
+
+//mod 3 24/41
+
+const colors = [
+  { hex: "#f44336", rgb: "244,67,54" },
+  { hex: "#2196f3", rgb: "33,150,243" },
+  { hex: "#4caf50", rgb: "76,175,80" },
+  { hex: "#ffeb3b", rgb: "255,235,59" },
+];
+
+const hexColors = [];
+const rgbColors = [];
+
+for (const {hex, rgb} of colors) {
+  hexColors.push(hex);
+  rgbColors.push(rgb);
+}
+
+
+//mod 3 25/41
+
+const forecast = {
+  today: {
+    low: 28,
+    high: 32,
+    icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+  },
+  tomorrow: {
+    low: 27,
+    high: 31,
+  },
+};
+
+const {today: {low:lowToday, high: highToday, icon:todayIcon = ''},
+       tomorrow:{
+         high: highTomorrow,
+         low: lowTomorrow, icon: tomorrowIcon = 
+     "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"  }} = forecast
+       
+
+//mod 3 26/41
+
+function calculateMeanTemperature(forecast) {
+  const {
+    today: {low: todayLow, high: todayHigh},
+    tomorrow: {low: tomorrowLow, high: tomorrowHigh}
+} = forecast;
+  
+
+  
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
+
+
+console.log('calculateMeanTemperature({ today: {low: 37, high: 40}})')
+
+
+//mod 3 27/41
+
+const scores = [89, 64, 42, 17, 93, 51, 26];
+const bestScore1 = (Math.max(...scores));
+const worstScore1 = (Math.min(...scores))
+
+
+console.log(bestScore1);
+console.log(worstScore1)
+
+//mod 3 28/41
+
+const lastWeekTemps = [14, 25, 11];
+const currentWeekTemps = [23, 17, 18, 11,11,2];
+const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+
+
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allGroup =[...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+
+const bestScore=(Math.max(...allGroup));
+const worstScore=(Math.min(...allGroup));
+
+console.log(allGroup);
+console.log(firstGroupScores);
+console.log(secondGroupScores);
+console.log(thirdGroupScores);
+console.log(bestScore);
+console.log(worstScore);
+
+
+//
