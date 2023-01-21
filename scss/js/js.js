@@ -1050,8 +1050,8 @@ console.log(checkFruit("apple"))
 console.log(checkFruit("apple"))
 console.log(checkFruit("aple"))
 
-const a=12%7;
-console.log(a)
+const ab=12%7;
+console.log(ab)
 
 
 
@@ -1090,7 +1090,7 @@ console.log(apartment);
 console.log(owner,apartment);
 
 
-const book = {
+const book12 = {
   title: "Ostatnie królestwo",
   author: "Bernard Cornwell",
   genres: ["proza ​​historyczna", "przygody"],
@@ -1098,10 +1098,10 @@ const book = {
   rating: 8.38,
 };
 
-console.log(book);
+console.log(book12);
 
 
-const user = {
+const userNew = {
   name: "Jacques Gluke",
   tag: "jgluke",
   location: {
@@ -1113,7 +1113,7 @@ const user = {
     likes: 1308,
 
   },};
-  console.log(user);
+  console.log(userNew);
 
 
 
@@ -1278,7 +1278,7 @@ console.log(user3);
 console.log(user2,user3);
 editUserName;
 
-const books = [
+const books11 = [
   {
     title: "The Last Kingdom",
     author: "Bernard Cornwell",
@@ -1299,11 +1299,11 @@ const books = [
 
 let totalRating = 0;
 
-for (const book of books) {
+for (const book of books11) {
   totalRating += book.rating;
 }
-const averageRating = (totalRating / books.length).toFixed(1);
-console.log(averageRating);
+const averageRating1 = (totalRating / books.length).toFixed(1);
+console.log(averageRating1);
 
 console.log(book.title)
 
@@ -1996,8 +1996,8 @@ console.log(add(15,11));
 function addOverNum(firstArg, ...args) {
   let total = 0;
 
-  for (i=0;i<args.length; i++){
-    if(args> args){firstArg 
+  for (i=0;i<args.length; i+=1){
+    if(args[i] > firstArg){total +=args[i];
      
   }
   }
@@ -2005,4 +2005,222 @@ function addOverNum(firstArg, ...args) {
   return total;
   // Change code above this line
 }
+console.log(addOverNum(10,12,4,11,41,10,8)
+           )
+
+//mod 3 33/41
+
+// Change code below this line
+function findMatches(firstArg, ...anyArgs) {
+  const matches = []; // Don't change this line
+for(let arg of firstArg){
+  for (let value of anyArgs){
+    if(value===arg){
+      matches.push(arg)
+    }
+  }
+}
+ // Change code above this line
+  return matches;
+}
+
+//////////////////////////////
+// Tablice obiektów przykłady 
+
+const booksS=[{title: "The Last Kingdom",
+author: "Bernard Cornwell",
+rating: 8.38,
+},
+{
+title: "Beside Still Waters",
+author: "Robert Sheckley",
+rating: 8.51,
+},
+{
+title: "Sen śmiesznego człowieka",
+author: "Fiodor Dostojewski",
+rating: 7.75,
+},
+];
+console.log(booksS);
+console.log(booksS.author);
+
+for(const book of booksS){
+  // console.log(book);
+  console.log(book.title);
+  console.log(book.author);
+  console.log(book.rating)
+}
+
+const bookNames = [];
+console.log(bookNames);
+for (const book of booksS){
+  bookNames.push(book.title);
+
+}
+console.log(bookNames);
+let totalRating2 = 0;
+for(const book of booksS){
+  totalRating += book.rating
+}
+
+const averageRating2 = (totalRating/ booksS.length).toFixed(4);
+console.log(averageRating2)
+
+////////////////////tasks from conspect//////
+
+
+function calculateTotalPrice(order) {
+  let total = 0;
+  // Change code below this line
+  for (const orderElement of order) {
+    total += orderElement;
+  }
+  // Change code above this line
+  return total;
+}
+
+console.log(calculateTotalPrice([12,85,37,4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+console.log(calculateTotalPrice([]));
+
+
+
+function findLongestWord(string) {
+  // Change code below this line
+let newArray = string.split(' ');
+  let maxWord = ' ';
+  for (let i = 0; i < newArray.length; i++){
+    if(newArray[i].length > maxWord.length){
+      maxWord = newArray[i]
+    }
+  }
+return maxWord;
+  // Change code above this line
+}
+console.log(findLongestWord("The quick brown fox jumssd over the lazy dog"));
+console.log(findLongestWord("The quick brown fox jumssd over the lazy dog"));
+console.log(findLongestWord("The quick brown fox jumssd over the lazy dog"));
+
+console.log(findLongestWord("mac","ja"));
+
+
+const books=[{title: "The Last Kingdom",
+author: "Bernard Cornwell",
+rating: 8.38,
+},
+{
+title: "Beside Still Waters",
+author: "Robert Sheckley",
+rating: 8.51,
+},
+{
+title: "Sen śmiesznego człowieka",
+author: "Fiodor Dostojewski",
+rating: 7.75,
+},
+];
+console.log(books);
+console.log(books.author);
+
+for(const book of books){
+  // console.log(book);
+  console.log(book.title);
+  console.log(book.author);
+  console.log(book.rating)
+}
+
+const bookNames1 = [];
+console.log(bookNames1);
+for (const book of books){
+  bookNames1.push(book.title);
+
+}
+console.log(bookNames);
+let totalRating3 = 0;
+for(const book of books){
+  totalRating3 += book.rating
+}
+
+const averageRating = (totalRating/ books.length).toFixed(4);
+console.log(averageRating)
+
+const book = {
+title: "The Last Kingdom",
+author: "Bernard Cornwell",
+genres: ["historical prose", "adventure"],
+rating: 8.38,};
+for(const keys in book){
+
+
+console.log(book[book]);
+console.log(book)
+;
+}
+
+const user ={ email: "mango@mail.com",
+age: 20, 
+location: {lat:10,lon:20},
+};
+const {
+  location: {
+    lat,lon}} = user;
+    console.log(lat, lon)
+
+
+    function foo({username} ={}) {
+      console.log(username);
+
+    }
+    foo();
+
+    const values=[10,3,17,84,12,6];
+    const min = Math.min(...values);
+    console.log(min)
+
+    const arr1 =[1,2,3,4,5];
+    const arr2 = [...arr1];
+    console.log(arr1 === arr2);
+    
+
+const firstObject = {A: 1, B:2};
+const secondObject = {A:3, C:4};
+const thirdObject = {A: 5, ...firstObject, ...secondObject,C:6};
+const fourthObject ={...firstObject, B:11, ...secondObject, ...thirdObject}
+
+console.log(thirdObject);
+console.log(fourthObject)
+
+const bookShelf2 = {
+  // Change code below this line
+  books: ["The last kingdom", "The guardian of dreams"],
+  getBooks() {
+    return "Returning all books";
+  },
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
+  },
+};
+
+const bookForMe ={ 
+  title: "Ostatni samuraj",
+  author: "Jan Kochanowski",
+  price: "50zł",
+}
+
+const bookForMeNow = bookForMe.price;
+console.log(bookForMeNow)
+console.log(bookForMe);
+console.log(bookForMe.title)
+console.log(bookForMe.author)
+console.log(bookForMe.price)
+
+console.log(bookForMe)
+console.log(undefined)
+////////////////////////////////
+
+//mod 3 34/41
+
+
 
