@@ -1384,7 +1384,7 @@ return newElement;
 // ];
 
 // function getAllPropValues(propName) {
- 
+ // Change code below this line
 // let newArr = []
 //   for(let product of products){
 //     if(product[propName]) {
@@ -1393,7 +1393,7 @@ return newElement;
 //   }
 
 // return newArr
-  
+   // Change code above this line
 // }
 
 
@@ -1408,13 +1408,16 @@ const products = [
 ];
 
 function calculateTotalPrice(productName) {
+  // Change code below this line
 for(let item of products)
   if(item.name === productName){
     return item.price * item.quantity
   }
 
 return 0
+  // Change code above this line
 }
+
 
 //mod 3 21/41
 
@@ -1423,8 +1426,9 @@ const highTemperatures3 = {
   today: 26,
   tomorrow: 33,
 };
-
+// Change code below this line
 const {yesterday3, today3, tomorrow3} = highTemperatures3;
+// Change code above this line
 const meanTemperature3 = (yesterday3 + today3 + tomorrow3) / 3;
 
 
@@ -1451,10 +1455,10 @@ const meanTemperature = (yesterday + today + tomorrow) / 3;
 //   today: 26,
 //   tomorrow: 33,
 // };
-
+// Change code below this line
 
 // const {yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
-
+// Change code above this line
 
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
@@ -1472,7 +1476,7 @@ const colors = [
 
 const hexColors = [];
 const rgbColors = [];
-
+// Change code below this line
 for (const {hex, rgb} of colors) {
   hexColors.push(hex);
   rgbColors.push(rgb);
@@ -1492,27 +1496,24 @@ const forecast = {
     high: 31,
   },
 };
-
+// Change code below this line
 const {today: {low:lowToday, high: highToday, icon:todayIcon = ''},
        tomorrow:{
          high: highTomorrow,
          low: lowTomorrow, icon: tomorrowIcon = 
      "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"  }} = forecast
        
-
 //mod 3 26/41
 
+// Change code below this line
 function calculateMeanTemperature(forecast) {
   const {
     today: {low: todayLow, high: todayHigh},
     tomorrow: {low: tomorrowLow, high: tomorrowHigh}
 } = forecast;
-  
-
-  
+  // Change code above this line
   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
-
 
 console.log('calculateMeanTemperature({ today: {low: 37, high: 40}})')
 
@@ -1520,37 +1521,81 @@ console.log('calculateMeanTemperature({ today: {low: 37, high: 40}})')
 //mod 3 27/41
 
 const scores = [89, 64, 42, 17, 93, 51, 26];
-const bestScore1 = (Math.max(...scores));
-const worstScore1 = (Math.min(...scores))
+// Change code below this line
+const bestScore = (Math.max(...scores));
+const worstScore = (Math.min(...scores))
 
-
-console.log(bestScore1);
-console.log(worstScore1)
+// console.log(bestScore1);
+// console.log(worstScore1)
 
 //mod 3 28/41
-
-const lastWeekTemps = [14, 25, 11];
-const currentWeekTemps = [23, 17, 18, 11,11,2];
-const allTemps = [...lastWeekTemps, ...currentWeekTemps];
-console.log(allTemps); // [14, 25, 11, 23, 17, 18]
-
-
 
 const firstGroupScores = [64, 42, 93];
 const secondGroupScores = [89, 14, 51, 26];
 const thirdGroupScores = [29, 47, 18, 97, 81];
-
-const allGroup =[...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-
-const bestScore=(Math.max(...allGroup));
-const worstScore=(Math.min(...allGroup));
-
-console.log(allGroup);
-console.log(firstGroupScores);
-console.log(secondGroupScores);
-console.log(thirdGroupScores);
-console.log(bestScore);
-console.log(worstScore);
+// Change code below this line
+const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+const bestScore2 = (Math.max(...allScores));
+const worstScore2 = (Math.min(...allScores));
 
 
-//
+//mod 3 29/41
+
+const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+// Change code below this line
+const finalSettings = {...defaultSettings,...overrideSettings};
+
+
+//mod 3 30/41
+
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+return {completed, priority, category, ... data}
+  // Change code above this line
+}
+
+//mod 3 31/41
+
+// Change code below this line
+function add(...args) {
+  // Change code above this line
+let sum=0;
+  for (let i =0; i< args.length;i++){sum +=args[i]};
+  
+return sum;
+}
+
+console.log(add(15,11));
+console.log(add(15,1,2,3,4,5,1,11));
+console.log(add(15,11));
+
+//mod 3 32/41
+
+// Change code below this line
+function addOverNum(firstArg, ...args) {
+  let total = 0;
+
+  for (i=0;i<args.length; i++){
+    if(args> args){firstArg 
+     
+  }
+  }
+
+  return total;
+  // Change code above this line
+}
+
