@@ -2218,9 +2218,246 @@ console.log(bookForMe.price)
 
 console.log(bookForMe)
 console.log(undefined)
+
+for (key1 in bookForMe){
+  console.log(key1);
+}
+
+
+
+
+const notebook = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  isPublic: true,
+  rating: 8.38,
+};
+
+for (const key in notebook){ 
+  console.log(key);
+}
+
+for(const element in notebook){ console.log(element);}
+
+for(const note in notebook){ console.log(note.length);
+
+}
+
+for (const rate in notebook){ console.log(Math.max(rate === notebook.rating))};
+
+for(const name in notebook) {
+  // return name;
+  console.log(name);
+}
+
+for (const some in notebook){console.log(some)};
+
+for(const me in notebook){console.log(me.length)}
+
 ////////////////////////////////
+//metoda Object.values 
+// const goods = {
+//   apples: 6,
+//   grapes: 3,
+//   bread: 4,
+//   cheese: 7,
+// };
+
+// const values = Object.values(goods);
+
+// let total = 0;
+// for(const value of values){
+//   total += value;
+// }
+// console.log(total)
+//--------------------------------------//
 
 //mod 3 34/41
 
 
+//callback - funkcje wywołania zwrotnego 
 
+
+function greet(name){
+  return `Pozdrawiam ${name}`;
+
+}
+
+console.log(greet('Mango')
+);
+
+console.log(greet);
+console.log(greet());
+
+
+
+
+function modul1(callback){
+  //pobieramy dane z serwera...
+  const data = [{},{}];
+  // jezeli mamy dane z serwera tj true
+  console.log(callback)
+  if (data.length){
+callback(data);
+  }
+}
+
+modul1(logArrayToConsole);
+
+
+///////// prosta funkcja sumy dwóch liczb
+
+
+function sumTwoNumbers(a,b){return a+b};
+console.log(sumTwoNumbers(2,5));
+
+//
+
+
+function modul1WithTwoCallbacks(succesCallback, errorCallback){
+  //pobieramy dane z serwera...
+  const data = [{id:1, data:[] },{id:2, data: []},{},{},{}
+];
+  // jezeli mamy dane z serwera tj true
+  // console.log(callback)
+  if (data.length){
+succesCallback(data);
+  } else {
+    errorCallback('wystapil blad pobierania danych');
+  }
+}
+
+modul1(logArrayToConsole);
+console.log(modul1WithTwoCallbacks);
+
+
+
+
+// function sumTwoNumbers(a,b){return a+b};
+// console.log(sumTwoNumbers(2,5));
+
+[].map(()=> {})
+
+
+///////mod 4 callback i funkcje strzałkowe
+
+// function processCall(recipient) {
+//   // Symuluj dostępność abonenta za pomocą liczby losowej
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+
+//   if (!isRecipientAvailable) {
+//     console.log(`Abonent ${recipient} jest niedostępny, zostaw wiadomość.`);
+//     // Logika aktywacji automatycznej sekretarki
+//   } else {
+//     console.log(`Łączenie z ${recipient}, proszę czekać...`);
+//     // Logika odbierania połączenia
+//   }
+// }
+
+// processCall("Mango");
+
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+// console.log(Math.random().toFixed(1));
+
+
+// function sumTwoNumbers(a,b){return a+b};
+// console.log(sumTwoNumbers(2,5));
+
+
+function processCall(recipient, onAvailable, onNotAvailable) {
+  // Symuluj dostępność abonenta za pomocą liczby losowej
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+    onNotAvailable(recipient);
+    return;
+
+  }
+
+  onAvailable(recipient);
+
+  
+}
+
+function takeCall(name) {
+  console.log(`Łączenie z ${name}, proszę czekać...`);
+  // Logika odbierania połączenia
+}
+
+function activateAnsweringMachine(name) {
+  console.log(`Abonent ${name} jest niedostępny, zostaw wiadomość.`);
+  // Logika aktywacji automatycznej sekretarki
+}
+
+function leaveHoloMessage(name) {
+  console.log(`Abonent ${name} jest niedostępny, nagrywamy hologram.`);
+  // Logika nagrywania hologramu
+}
+
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
+
+
+for (let i = 0; i < 10; i += 1) {
+  console.log(i);
+}
+
+function repeatLog(n) {
+  for (let i = 0; i < n; i += 1) {
+    console.log(i);
+  }
+}
+
+repeatLog(7);
+
+
+function printValue(value) {
+  console.log(value);
+}
+
+function prettyPrint(value) {
+  console.log("Logging value: ", value);
+}
+
+function repeat(n, action) {
+  for (let i = 0; i < n; i += 1) {
+    action(i);
+  }
+}
+
+// Przekaż printValue jako funkcję zwrotną
+repeat(20, printValue);
+// 0
+// 1
+// 2
+
+// Przekaż prettyPrint jako funkcję zwrotną
+repeat(3, prettyPrint);
+// Logging value: 0
+// Logging value: 1
+// Logging value: 2
+
+
+[1,2,3].forEach(n => console.log(n));
+[1,2,3].forEach(n => console.log("JavaScript"));
+/////////////////------------------>
+
+function classicAdd(a, b, c) {
+  return a + b + c;
+}
