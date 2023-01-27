@@ -2478,7 +2478,71 @@ console.log(colorPickerOptions.find(option => option.label === "pink")); // { la
 console.log(colorPickerOptions.find(option => option.label !== "white")); // undefined
 console.log(colorPickerOptions.find(option => option.label === "indigo")); // undefined
 
+///// and findIndex
+console.log(colorPickerOptions.findIndex(option => option.label === "blue")); // 2
+console.log(colorPickerOptions.findIndex(option => option.label === "pink")); // 3
+console.log(colorPickerOptions.findIndex(option => option.label === "white")); // -1
+
+///// reduce
+const total = [2,7,3,14,6].reduce((previousValue,number)=>{
+  return previousValue+number;
+})
+console.log(total);
+
+
+const students1 = [
+  { name: "Mango", score: 83 },
+  { name: "Poly", score: 59 },
+  { name: "Ajax", score: 37 },
+  { name: "Kiwi", score: 94 },
+  { name: "Houston", score: 64 },
+];
+
+// Nazwa akumulatora może być dowolna, to tylko parametr funkcji
+const totalScore = students1.reduce((total, student) => {
+  return total + student.score;
+}, 0);
+
+const averageScore = totalScore / students1.length;
+console.log(students1);
+console.log(totalScore);
+
+
+///// zaawansowane uzycie reduce
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+// Popatrzmy na wszystkie elementy kolekcji i dodajmy wartości właściwości tags
+// do akumulatora, którego początkową wartość podamy jako pustą tablicę [].
+// W każdej iteracji włóżmy wszystkie elementy tweet.tags do akumulatora i zwróćmy je.
+const tags11 = tweets.reduce((allTags, tweet) => {
+  allTags.push(...tweet.tags11);
+
+  return allTags;
+}, []);
+
+console.log(tags11);
+
+// Zbiór tagów to nie pojedyncza operacja, więc napiszmy funkcję
+// do zbioru tagów z kolekcji
+const getTags = tweets =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags11);
+
+    return allTags;
+  }, []);
+
+console.log(getTags(tweets));
+
+
 /////
+
 
 
 
