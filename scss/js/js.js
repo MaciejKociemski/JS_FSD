@@ -2413,6 +2413,74 @@ console.log(processCall("Mango"));
 
 
 
+//podejście imperatywne
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = [];
+
+for (let i=0;i< numbers.length;i++){
+  if(numbers[i]>3){filteredNumbers.push(numbers[i])}
+}
+
+console.log(filteredNumbers)
+
+
+// podejście deklaratywne
+
+const nbrs=[1,2,3,4,5];
+const numbersfiltered = nbrs.filter(value=>value >3);
+console.log(numbersfiltered)
+
+/////tablica obiektów 
+const students = [
+  { name: "Mango", score: 83, age:10, },
+  { name: "Poly", score: 59, age:10, },
+  { name: "Ajax", score: 37,age:10, },
+  { name: "Kiwi", score: 94,age:10, },
+  { name: "Houston", score: 64,age:10 },
+];
+
+const names=students.map(student=>student.name)
+const scores=students.map(student=>student.score)
+const ages= students.map(student=>student.age)
+
+console.log(students);
+console.log(names);
+console.log(scores);
+console.log(ages);
+
+/////
+
+//filtry wartosci dodatnie i ujemne z tablicy 
+
+const values1 = [51, -3, 27, 21, -68, 42, -37];
+
+const positiveValues = values1.filter(value => value >= 0);
+console.log(positiveValues);
+
+const negativeValues = values1.filter(value=> value<=0);
+console.log(negativeValues)
+
+const bigValues = values.filter(value => value>30);
+console.log(bigValues)
+
+/////
+//metoda find
+
+const colorPickerOptions = [
+  { label: "red", color: "#F44336" },
+  { label: "green", color: "#4CAF50" },
+  { label: "blue", color: "#2196F3" },
+  { label: "pink", color: "#E91E63" },
+  { label: "indigo", color: "#3F51B5" },
+];
+console.log(colorPickerOptions.find(option => option.label === "blue")); // { label: 'blue', color: '#2196F3' }
+console.log(colorPickerOptions.find(option => option.label === "pink")); // { label: 'pink', color: '#E91E63' }
+console.log(colorPickerOptions.find(option => option.label !== "white")); // undefined
+console.log(colorPickerOptions.find(option => option.label === "indigo")); // undefined
+
+/////
+
+
 
 
 
