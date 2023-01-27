@@ -1807,222 +1807,32 @@ for (const index of array){
 
 //mod 3 20/41
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+//mod 3 19/41
 
-function calculateTotalPrice(productName) {
-  // Change code below this line
-for(let item of products)
-  if(item.name === productName){
-    return item.price * item.quantity
-  }
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-return 0
-  // Change code above this line
-}
+// function getAllPropValues(propName) {
+ // Change code below this line
+// let newArr = []
+//   for(let product of products){
+//     if(product[propName]) {
+//       newArr.push(product[propName]);
+//     }
+//   }
 
-
-//mod 3 21/41
-
-const highTemperatures3 = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
-// Change code below this line
-const {yesterday3, today3, tomorrow3} = highTemperatures3;
-// Change code above this line
-const meanTemperature3 = (yesterday3 + today3 + tomorrow3) / 3;
+// return newArr
+   // Change code above this line
+// }
 
 
-//mod 3 22/41
 
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
-// Change code below this line
+//mod 3 20/41
 
-const {yesterday, today, tomorrow, icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
-
-
-// Change code above this line
-const meanTemperature = (yesterday + today + tomorrow) / 3;
-
-
-//mod 3 23/41
-
-// const highTemperatures = {
-//   yesterday: 28,
-//   today: 26,
-//   tomorrow: 33,
-// };
-// Change code below this line
-
-// const {yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
-// Change code above this line
-
-// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
-
-// console.log(highTemperatures)
-
-
-//mod 3 24/41
-
-const colors = [
-  { hex: "#f44336", rgb: "244,67,54" },
-  { hex: "#2196f3", rgb: "33,150,243" },
-  { hex: "#4caf50", rgb: "76,175,80" },
-  { hex: "#ffeb3b", rgb: "255,235,59" },
-];
-
-const hexColors = [];
-const rgbColors = [];
-// Change code below this line
-for (const {hex, rgb} of colors) {
-  hexColors.push(hex);
-  rgbColors.push(rgb);
-}
-
-
-//mod 3 25/41
-
-const forecast = {
-  today: {
-    low: 28,
-    high: 32,
-    icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
-  },
-  tomorrow: {
-    low: 27,
-    high: 31,
-  },
-};
-// Change code below this line
-const {today: {low:lowToday, high: highToday, icon:todayIcon = ''},
-       tomorrow:{
-         high: highTomorrow,
-         low: lowTomorrow, icon: tomorrowIcon = 
-     "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"  }} = forecast
-       
-//mod 3 26/41
-
-// Change code below this line
-function calculateMeanTemperature(forecast) {
-  const {
-    today: {low: todayLow, high: todayHigh},
-    tomorrow: {low: tomorrowLow, high: tomorrowHigh}
-} = forecast;
-  // Change code above this line
-  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-}
-
-console.log('calculateMeanTemperature({ today: {low: 37, high: 40}})')
-
-
-//mod 3 27/41
-
-const scores = [89, 64, 42, 17, 93, 51, 26];
-// Change code below this line
-const bestScore = (Math.max(...scores));
-const worstScore = (Math.min(...scores))
-
-// console.log(bestScore1);
-// console.log(worstScore1)
-
-//mod 3 28/41
-
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
-// Change code below this line
-const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-const bestScore2 = (Math.max(...allScores));
-const worstScore2 = (Math.min(...allScores));
-
-
-//mod 3 29/41
-
-const defaultSettings = {
-  theme: "light",
-  public: true,
-  withPassword: false,
-  minNumberOfQuestions: 10,
-  timePerQuestion: 60,
-};
-const overrideSettings = {
-  public: false,
-  withPassword: true,
-  timePerQuestion: 30,
-};
-// Change code below this line
-const finalSettings = {...defaultSettings,...overrideSettings};
-
-
-//mod 3 30/41
-
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
-return {completed, priority, category, ... data}
-  // Change code above this line
-}
-
-//mod 3 31/41
-
-// Change code below this line
-function add(...args) {
-  // Change code above this line
-let sum=0;
-  for (let i =0; i< args.length;i++){sum +=args[i]};
-  
-return sum;
-}
-
-console.log(add(15,11));
-console.log(add(15,1,2,3,4,5,1,11));
-console.log(add(15,11));
-
-//mod 3 32/41
-
-// Change code below this line
-function addOverNum(firstArg, ...args) {
-  let total = 0;
-
-  for (i=0;i<args.length; i+=1){
-    if(args[i] > firstArg){total +=args[i];
-     
-  }
-  }
-
-  return total;
-  // Change code above this line
-}
-console.log(addOverNum(10,12,4,11,41,10,8)
-           )
-
-//mod 3 33/41
-
-// Change code below this line
-function findMatches(firstArg, ...anyArgs) {
-  const matches = []; // Don't change this line
-for(let arg of firstArg){
-  for (let value of anyArgs){
-    if(value===arg){
-      matches.push(arg)
-    }
-  }
-}
- // Change code above this line
-  return matches;
-}
 
 //////////////////////////////
 // Tablice obiektów przykłady 
@@ -2461,3 +2271,148 @@ repeat(3, prettyPrint);
 function classicAdd(a, b, c) {
   return a + b + c;
 }
+
+
+
+
+//// tasks from zajecia 8 metody tablic - przykład
+
+const allCourses = ['matematyka', 'fizyka', 'informatyka', 'matematyka', 'fizyka', 'biologia']
+const filterUniq = (arr) => arr.filter((c, i, arr) => arr.indexOf(c) === i);
+filterUniq(allCourses)
+
+
+
+///destrukturyzacja - tablic
+
+const tab = ["Ala", "Ola", "Ela", "Fela"];
+const[name1,name2_1,name3,name4]=tab;
+console.log(name1,name2_1,name3,name4);
+console.log(tab);
+
+
+/////
+const obj={
+  firstName: "Karol",
+  lastName:"Kowalski",
+  age:20
+}
+
+// const[firstName,lastName,age]=obj;
+
+console.log(obj.firstName,obj.age,'surname:',obj.lastName,'.ilośc liter w nazwisku to:',obj.lastName.length,'a ilość liter w imieniu, które brzmi:',obj.firstName,'to:',obj.firstName.length)
+
+///// zapis Math.max(...[14, -4, 25, 8, 11]), po interpretacji zamienia się w Math.max(14, -4, 25, 8, 11) - składnia ... zwraca rozpakowaną tablicę, czyli rozkłada jej elementy jako oddzielne argumenty.
+
+const temps =[14, -4, 25, 8, 11];
+console.log(temps);
+console.log(Math.min(...temps));
+console.log(Math.max(...temps));
+const lowNumber=(Math.min(...temps));
+console.log(lowNumber);
+const higherNumber=(Math.max(...temps));
+console.log(higherNumber)
+
+/////////  utworzenie nowego obiektu z dwóch tablic , wynik posortowany od najwiekszej do najmniejszej (b-a), albo od najmniejszej do najwiekszej (a-b)
+const lastWeekTemps = [14, 25, 11];
+const currentWeekTemps = [23, 17, 18];
+const allTemps=[...lastWeekTemps,...currentWeekTemps];
+console.log(lastWeekTemps);
+console.log(currentWeekTemps);
+console.log(allTemps);
+const allTempsReverse=[...currentWeekTemps,...lastWeekTemps];
+console.log(allTempsReverse);
+console.log(allTempsReverse.sort((a,b)=> b-a))
+
+///////
+
+
+const first = { propA: 5, propB:10};
+const second = {propC: 15, propD: 20}
+const third ={...first,propXYZ:999,...second, propX:10000}
+console.log(third)
+const fourth={...second,b:100,...first,...third,a:1000};
+console.log(fourth);
+console.log(fourth)
+
+//////
+
+const firstBook = {
+  title: "The Last Kingdom",
+  coverImage:
+    "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+};
+
+const {
+  title: firstTitle,
+  coverImage: firstCoverImage = "https://via.placeholder.com/640/480",
+} = firstBook;
+
+
+console.log(firstBook);
+console.log(firstTitle);
+console.log(firstCoverImage);
+
+const secondBook = {
+  title: "Sen śmiesznego człowieka",
+}
+
+const {
+  title:secondTitle,
+  coverImage: secondCoverImage="https://costamcostamwww.com"
+}= secondBook;
+
+console.log(secondBook);
+console.log(secondTitle);
+console.log(secondCoverImage);
+
+///////destrukturyzacja tablic
+
+const rgb=[200,255,100];
+const [red,green,blue]= rgb;
+console.log([rgb]);
+console.log(rgb);
+console.log(`R:${red},G:${green},B:${blue}`);
+
+/////
+// Funkcja wywołania zwrotnego
+function greet(name) {
+  console.log(`Pozdrawiam Cię serdecznie , mój drogi ${name}. Twoje imię ${name} pasuje do naszego wierunku`);
+}
+
+console.log(greet);
+
+function registerGuest(name, callback){
+console.log(`Rejestracja gościa ${name}.`);
+callback(name);
+
+}
+
+registerGuest("James", greet);
+registerGuest("Mango", greet);
+registerGuest("Poly", greet);
+registerGuest("Henry", greet);
+
+///// symulacja dostepnosci i niedostepnosci podczas proby dodzwonienia sie 
+function processCall(recipient){
+  const isRecipientAvaiable = Math.random()>0.5;
+
+  if(!isRecipientAvaiable){
+    console.log(`Abonent ${recipient} jest niedostępny , zostaw ${recipient} wiadomość`);
+  }
+  else{ console.log(`już łączymy ${recipient}`)}
+}
+
+console.log(processCall("Mango"));
+console.log(processCall("Mango"));
+console.log(processCall("Mango"));
+console.log(processCall("Mango"));
+console.log(processCall("Mango"));
+
+///// funkcje strzałkowe jako deklaracja funkcji
+
+
+
+
+
+
