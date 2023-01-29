@@ -2543,7 +2543,111 @@ console.log(getTags(tweets));
 
 /////
 
+//metoda sort
+// numbers sorted
+const scores2=[12,22,3,4,55,66,77];
+console.log(scores2);
+console.log([scores2])
+scores2.sort();
+console.log(scores2)
+console.log([scores2]);
 
+
+
+//month sorted
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+console.log(months)
+months.sort();
+console.log(months);
+
+
+const array1 = [1, 30, 4, 21, 100000];
+console.log(array1)
+array1.sort();
+console.log(array1);
+
+
+
+///
+const stringArray = ["Blue", "Humpback", "Beluga"];
+
+console.log(stringArray)
+
+const numberArray = [40, 1, 5, 200];
+
+console.log(numberArray)
+
+const numericStringArray = ["80", "9", "700"];
+
+console.log(numericStringArray)
+
+const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
+
+console.log(mixedNumericArray)
+
+
+
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+stringArray.join(); // 'Blue,Humpback,Beluga'
+stringArray.sort(); // ['Beluga', 'Blue', 'Humpback']
+
+numberArray.join(); // '40,1,5,200'
+numberArray.sort(); // [1, 200, 40, 5]
+numberArray.sort(compareNumbers); // [1, 5, 40, 200]
+
+numericStringArray.join(); // '80,9,700'
+numericStringArray.sort(); // ['700', '80', '9']
+numericStringArray.sort(compareNumbers); // ['9', '80', '700']
+
+mixedNumericArray.join(); // '80,9,700,40,1,5,200'
+mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
+mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
+
+const scores3=[61, 19, 74, 35, 92, 56];
+console.log(scores3)
+scores3.sort();
+console.log(scores3);
+
+
+const students2=["Vika", "Andrey", "Oleg", "Julia", "Boris", "Katya"];
+console.log(students2);
+students2.sort();
+console.log(students2);
+
+
+
+
+const student=["Vika", "Andrey", "Oleg", "Julia", "Boris", "Katya"];
+const inAlfabeticalOrder = [...student].sort((a,b)=>a.localeCompare(b));
+console.log(student);
+console.log(inAlfabeticalOrder);
+const inNotAlfabeticalOrder=[...student].sort((a,b)=>b.localeCompare(a));
+console.log(inNotAlfabeticalOrder)
+
+/////
+
+//ciekawy przyklad sortowania z wykorzystaniem .map. flatMap .filter .indexOf
+
+const students0 = [
+  { name: "Mango", score: 83, courses: ["matematyka", "fizyka"] },
+  { name: "Poly", score: 59, courses: ["informatyka", "matematyka"] },
+  { name: "Ajax", score: 37, courses: ["fizyka", "biologia"] },
+  { name: "Kiwi", score: 94, courses: ["literatura", "informatyka"] },
+];
+const names0=[...students]
+
+
+const uniqueSortedCourses = students0
+  .flatMap(student => student.courses)
+  .filter((course, index, array) => array.indexOf(course) === index)
+  .sort((a, b) => b.localeCompare(a));
+
+console.log(uniqueSortedCourses); // ['biologia', 'informatyka', 'literatura', 'matematyka', 'fizyka']
+
+/////
 
 
 
