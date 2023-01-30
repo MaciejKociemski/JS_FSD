@@ -1,14 +1,13 @@
 body {
     background: transparent;
-
-    background-color: rgb(70, 186, 103);
-    
+    background-color:black;
     /* Make it white if you need */
     color: #f5f3ef;
     padding: 0 24px;
-    text-align: right;
+    text-align: left;
     // height: 100vh;
     // display: flex;
+    padding: 30px;
     font-size: 14px;
     justify-content: center;
     align-items: center;
@@ -29,18 +28,18 @@ body {
 // }
 
 
-.header__btn {
-    width: 120px;
+// .header__btn {
+//     width: 120px;
     
-    box-shadow: 1px 2px 3px 1px;
-    background-color: aquamarine;
-    border-radius: 50px;
-    border: none;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-}
+//     box-shadow: 1px 2px 3px 1px;
+//     background-color: aquamarine;
+//     border-radius: 50px;
+//     border: none;
+//     padding: 10px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     cursor: pointer;
+// }
 
 // .header__btn:hover {
 //     background-color: darkorange;
@@ -157,3 +156,12 @@ body {
 // .modalWindow__link:focus:after {
 //     width: 110%;
 // }
+ 
+
+
+.btn {width:120px; height:30px;border-radius: 50px;border-style: none
+    ;
+    color: black; }
+
+    .firstParagraph {color:antiquewhite; text-align: left;padding-top: 10px;}   
+    
