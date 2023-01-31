@@ -123,10 +123,559 @@ info(10e2)
 
 console.log(Number.parseFloat("4.678gfaadasd"));
 
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+
+let numberToTraining = 100;
+console.log(numberToTraining.toFixed(10));
+console.log(parseInt("asasaa"));
+console.log(parseInt("112asasaa"));
+console.log(isNaN("tak"));
+
+const o = "\u03A9";
+console.log(o);
+
+const str="Hello"+" "+"World";
+console.log(str)
+console.log(str.length)
+
+let cat="Kot";
+let dog="Dog";
+let text = `Ala ma ${cat}a i dodatkowo Ala niema tez ${dog}a i rybki`;
+console.log(text);
+
+
+let str5 = "01234567";
+console.log(str5);
+var j = str5.slice(1, 6); // "12345"
+console.log(j)
+var k = str5.slice(-1, 8); // "7"
+var l = str5.slice(-3);  //"567"
+var m = str5.slice(-3, -1); // "56"
+
+let g = "   Hello World! \n".trim();
+console.log(g)
+console.log(g = g.trim()); //"Hello World!"
+
+
+var data = 0;
+      if (data) console.log(" info 0"); //0 konweruje do false wiec kod NIE WYKONA SIE
+
+      data = 1;
+      if (data) console.log(" info 1"); //1 konweruje do true wiec kod WYKONA SIE
+
+      //if oczekuje spełnionego warunku true aby wykonal sie blok kodu, ale falsy values beda skonwertowane do typu boolean o wartosci false
+      if (" ") {
+        console.log(" nie wykona sie ");
+      }
+      if (0) {
+        console.log(" nie wykona sie ");
+      }
+      if (-0) {
+        console.log(" nie wykona sie ");
+      }
+      if (NaN) {
+        console.log(" nie wykona sie ");
+      }
+      if (null) {
+        console.log(" nie wykona sie ");
+      }
+      if (undefined) {
+        console.log(" nie wykona sie ");
+      }
+      if (false) {
+        console.log(" nie wykona sie ");
+      }
+      if (document.all) {
+        console.log(" nie wykona sie - WYJATEK - jedyny taki obiekt! ");
+      }
+
+let a=[1,2,3,"txt",['a','b']];
+console.log(a)
+let b= new Array(0,1,2,3,4,5,6,7,8,9);
+b[0]="dodałem w miejsce 0";
+b[1]="tu była kiedyś jedynka"
+b[3]="dodałem w miejsce 3";
+b[7]="dodałem w miejsce 7";
+console.log(b);
+
+var arr=["txt",1,2,3,[],99];
+for(let i=0;i<arr.length;i++){let element = arr[i];
+console.log(element);}
+
+
+var arrayWithNameOfFruit=['jabłko','gruszka','śliwka','porzeczka'];
+for(let i = 0;i<arrayWithNameOfFruit.length;i=i+1){
+    let result = arrayWithNameOfFruit[i];
+    console.log(result);
+    console.log(result.toUpperCase());
+    console.log(arrayWithNameOfFruit.sort());
+
+}
+
+var months = ["styczen", "luty", "kwiecień", "maj"];
+
+months.splice(2, 4, "marzec"); // dodanie "marzec" na drugi index tablicy, 0 elementow skasowanych
+console.log(months);
+
+var deleteElements = months.splice(1, 0, "test"); //skasowanie jednego elementu w indeksie nr 0 oraz dodanie na jego miejsce "test"
+console.log(months); //(5) ['test', 'luty', '
+
+var arr = ["a","b","c","d","e"];
+arr.splice(0, 0, "X", "Y", "Z"); // w drugim indeksie skasuj pozycje, w jeje mijsce wstaw XYZ
+console.log(arr); // ['a', 'b', 'X', 'Y', 'Z', 'd', 'e']
+
+
+let nbr=10;
+var result= nbr*2;
+console.log(result)
+
+let d=10;
+d+=5;
+d-=3;
+d*=2;
+d/=3;
+d%=5;
+d**=5
+console.log(d);
+
+let x=8;
+let y=3;
+console.log(x && y);
+console.log(x==x);
+console.log(y==y);
+console.log(x!=y);
+console.log(x<y);
+console.log(x>y);
+
+let is="WItaj"+"świecie";
+is +="??";
+console.log(is)
+
+let age=Math.random() * 20;
+console.log(age.toFixed(1),`lat`);
+let ageCheck=age>=18? "dorosły" :"małoletni";
+console.log(ageCheck);
+let obj12 = {num:10};
+
+if ("1" + 0 == "10") console.log("true, liczba 0 na string");
+let c = " " - 111;
+console.log(c);
+
+
+if ("test") console.log("string na boolean");
+
+console.log(Boolean(null));
+
+
+
+console.log(Math.floor(-2.91211));
+console.log(Math.ceil(-2.91211));
+console.log(Math.ceil(11.00000001));
+console.log(Math.round(0.8));
+
+//---------------------------------------//
+
+function test() {
+    console.log(data); //undefined
+    var data = 4;
+    console.log(data); //undefined
+}
+
+
+console.log(data)
+function test() {
+        var data;
+        console.log(data); //undefined
+        data = 4;
+        console.log(data); //undefined
+    }
+
+
+    
+test2(5,6); //20
+function test2(a,b) {
+    console.log("Wynik: "+(a*b));
+}
+
+n in window //true
+var n = 10;
+var m =5;
+console.log(n+m); //15
+
+console.log(x);
+console.log(y);
+
+var obiekt={};
+console.log(obiekt);
+
+var aar2=[1,2,3,4,5];
+console.log(aar2)
+
+var rect = {x:10, y:0, width:100, height:200};
+console.log(rect);
+let i = 0;i<rect.length;i++;{
+    let sum=rect[i];
+    console.log(i)
+}
+
+let car = {
+    name: "Chevrolet",
+    model: "Mako Shark",
+    year: 1965,
+    details: {
+        type: "concept car",
+        codeName: "XP-755"
+    },
+    information: function() {
+        console.log(this.name, this.model, this.details.type);
+    }
+}
+console.log(this);
+
+
+let plane = new Object(); // funkcja konstruujaca Object()
+plane.name = "Lockhead SR-71";
+plane.codeName = "BlackBird";
+plane.properties = { maxSpeed: "3.2 Mach" };
+plane.printInfo = function () {
+    console.log(this.name, this.codename, this.properties.maxSpeed);
+};
+function Car2(brand, model) {  // konstr z dużej by odróżnić od innych funkcji
+    this.brand = brand; // this to nowo utworzony obiekt
+    this.model = model;
+    this.printInfor = function() {
+        console.log(this.brand, this.model)
+    }
+}
+
+const car2 = new Car2("fiat", "126p");
+car2.printInfor; // fiat 126p
+
+console.log(plane.name);
+
+//-----------------
+let person = {name:"andy", age: 30};
+
+var person2 = Object.create(person);
+console.log(person2.name.toUpperCase()); // andy
+
+let obiekt2 = Object.create(null); //tworzy nowy obiekt bez prototypu
+
+//DOSTEP DO WLASCIWOSCI OBIEKTY
+var obj3 = {
+    name: "test", size: 10,
+    log: function() {
+        console.log(this.name, this.size)
+    } 
+};
+console.log(obj3);
+
+
+
+
+//autosprawdzanie testy
+
+function makeOrderMessage(ordered, price, deliveryFee) {
+  const totalPrice = ordered * price + deliveryFee;
+  const message = `Drogi Kliencie, zamówiełeś ${ordered} sztuk, w cenie ${price} , plus koszty dostawy w wysokości ${deliveryFee}. Łacznie do zapłaty : ${totalPrice}`;
+  return message;
+}
+
+console.log(makeOrderMessage(100, 200, 10));
+
+/////////////////////////
+let type;
+const age1 = 20;
+
+if (age1 >= 18) {
+  type = "adult";
+} else {
+  type = "child";
+}
+console.log(type)
+/////////////////////////
+
+const ageChoise=10;
+const typeChoise = ageChoise >= 18 ? 'prawda' : 'mniej';
+console.log(typeChoise,'więcej');
+
+
+const numberWhichIlook=10;
+const nber = numberWhichIlook >20 ? 'większa' :'mniejsza';
+console.log(nber);
+console.log(numberWhichIlook);
+
+/////////////////////////
+function checkStorage(avaiable, ordered) {
+let message;
+message = ordered > avaiable ? 'not enought goods' : 'is ok';
+return message;}
+
+console.log(checkStorage(100,150));
+console.log(checkStorage(10,50));
+console.log(checkStorage(100,10));
+console.log(checkStorage(100,101-'11'));
+
+///////////////////////////
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "j";
+  let message;
+  message =password===ADMIN_PASSWORD?'correct':'not correct';
+  return message}
+
+  console.log(checkPassword('j'));
+///////////////////////////
+function getSubscriptionPrice(type){
+    let price;
+    switch(type){
+        case 'starter pack':
+        price=0;
+        break;
+        case 'pro':
+            price=20;
+            break;
+
+            case 'org':
+    }
+}
+//////////////
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "kadarka";
+  let message;
+  // Change code below this line
+switch(password){
+  case null: message = "Canceled by user!";
+    break;
+  case ADMIN_PASSWORD: 
+    message = "Welcome!";
+break;
+  default: 
+    message="Access denied, wrong password!";
+}
+  // Change code above this line
+  return message;
+}
+console.log(checkPassword('kadarka'))
+////////////////////
+
+function getShippingCost(country) {
+  let message;
+  // Change code below this line
+switch(country){
+  case "China":price = 100;
+    message =`Shipping to ${country} will cost ${price} credits`;
+    break;
+  case "Chile":price = 250;
+    message =`Shipping to ${country} will cost ${price} credits`;
+    break;
+  case "Australia":price = 170;
+    message =`Shipping to ${country} will cost ${price} credits`;
+    break;
+  case "Jamaica":price = 120;
+    message =`Shipping to ${country} will cost ${price} credits`;
+break;
+  
+  default: message = "Sorry, there is no delivery to your country";
+}
+  // Change code above this line
+  return message;
+}
+
+console.log(getShippingCost('Australia'));
+console.log(getShippingCost('Poland'));
+console.log(getShippingCost('Jamaica'));
+console.log(getShippingCost('China'));
+console.log(getShippingCost('Chile'));
+//////////////////////
+
+function getNameLength (name){
+    const message=`Name ${name} has ${name.length} letters`;
+    return message;
+}
+
+console.log(getNameLength("Maciej"));
+console.log(getNameLength("Igor"));
+console.log(getNameLength("Konstatynopolitańczykiewiczówna"));
+console.log(getNameLength("Agnieszka").toUpperCase());
+
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+</script>
+
+<script>////////////////BMI calculate
+
+let height = 1.78;
+let weight = 75.1;
+function calculateBmi(weight, height) {
+  return weight / (height * height);
+}
+let bmiResult = calculateBmi(weight, height).toFixed(2);
+console.log(bmiResult,'BMI wg podanych danych');
+console.log("  ")
+if (bmiResult <= 18.5) {
+  console.log(`Twój wzrost ${height}, Twoja waga to ${weight}, Twoje BMI wynosi ${bmiResult}, Twoje BMI jest zbt niskie`);
+} else if (bmiResult >= 25) {
+  console.log(`Twój wzrost ${height}, Twoja waga to ${weight},Twoje BMI wynosi ${bmiResult}, Twoje BMI jest zbyt wysokie.`);
+} else {
+  console.log(`Twój wzrost ${height}, Twoja waga to ${weight},Twoje BMI wynosi ${bmiResult} i jest to wynik prawidłowy`);
+}
+///////////////////////
+       
+    let monthNum = 10;
+    let season = "";
+
+    switch (monthNum) {
+    
+        case 3:
+        case 4:
+        case 5:
+            season = "wiosna";
+            break;
+        case 6:
+        case 7:
+        case 8:
+            season = "lato";
+            break;
+        case 9:
+        case 10:
+        case 11:
+            season = "jesień";
+            break;
+        case 12:
+        case 1:
+        case 2:
+            season = "zima";
+            break;
+        default:
+            console.log("brak informacji");
+    } 
+
+    console.log("Numer miesięca", monthNum, "wskazuje na", season);
+
+//////////////////////
+
+var company = {
+        name: "",
+        adress: {
+          city: "obudowa",
+          street: "QuitsCase",
+        },
+        employees: [],
+
+        addEmploye: function (email, job, salary) {
+          if (
+            typeof email !== "string" ||
+            email.indexOf("@") === -1 ||
+            typeof job !== "string" ||
+            typeof salary !== "number" ||
+            salary < 4000
+          ) {
+            console.log("Nieprawidłowe dane pracownika");
+            return false;
+          }
+
+          const employee = {
+            email: email,
+            job: job,
+            salary: salary,
+            getInfo: function () {
+              return `${this.email} - ${this.job}, pensja: ${this.salary}`;
+            },
+          };
+
+          this.employees.push(employee);
+          return true;
+        },
+
+        showEmployees: function () {
+          console.log(`Pracownicy firmy ${this.name}`);
+
+          for (let i = 0; i < this.employees.length; i++) {
+            const e = this.employees[i];
+            console.log(e.getInfo());
+          }
+        },
+
+        changeSalary: function (percantageChange) {
+          for (let i = 0; i < this.employees.length; i++) {
+            const e = this.employees[i];
+            e.salary += e.salary * (0.01 * percantageChange);
+          }
+        },
+      };
+
+      company.addEmploye("ania@onet.pl", "admin", 10000);
+      company.addEmploye("adam@onet.pl", "electrician", 12500);
+      company.addEmploye("piotr@onet.pl", "cook", 20000);
+      company.addEmploye("kasia@onet.pl", "programmer", 15000);
+
+      company.showEmployees();
+
+      company.changeSalary(15);
+
+      company.showEmployees();
+
+//////////////
+const courseTopic = "JavaScript essentials";
+const courseTopicLength = courseTopic.length;
+const firstElement = courseTopic[0];
+const lastElement = courseTopic[courseTopic.length];
+
+console.log(courseTopic.length);
+console.log(courseTopic[2]);
+console.log(courseTopic[19]);
+//////////////
+const productName = "Repair droid";
+console.log(productName.length)
+console.log(productName.slice(0, 10)); // "Repa"
+console.log(productName.slice(3, 9)); // "air dr"
+console.log(productName.slice(0, productName.length)); // "Repair droid"
+console.log(productName.slice(7, productName.length)); // "droid"
+//////////////
+function getSubstring(string,length){
+    const substring = string.slice(0,length);
+    return substring;
+}
+console.log(getSubstring("Hello World!",1));
+//////////////
+
+function formatMessage(message, maxLength){
+    let result;
+    if(message.length < maxLength){
+        result = message;}
+        else {message = message.slice(0,maxLength);
+        result = message+"..."}
+    return result;
+}
+
+console.log(formatMessage("Curabitur ligula sapien", 11));
+//////////////
+console.log("samsUng" === "samsung"); // false
+console.log("saMsUng" === "SAMSUNG"); // false
+//////////////
+
+const BRAND_NAME = "SAMSUNG";
+const userInput = "saMsUng";
+const normalizedToUpperCaseInput = userInput.toUpperCase();
+
+console.log(userInput); // 'saMsUng'
+console.log(userInput === BRAND_NAME); // false
+console.log(normalizedToUpperCaseInput); // 'SAMSUNG'
+console.log(normalizedToUpperCaseInput === BRAND_NAME); // true
+
+/////////////
+function normalizeInput(input){
+    const normalizeInputMessage = input.toLowerCase();
+    return normalizeInputMessage;
+}
+
 
 
 </script>
-
-
 </body>
 </html>

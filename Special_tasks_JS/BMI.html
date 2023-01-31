@@ -31,6 +31,24 @@ if  (bmiResult <= 18.5) {
 } 
 
     </script>
+    <script>
+        let height2 = 1.77;
+let weight2 = 75.1;
+function calculateBmi(weight2, height2) {
+  return weight2 / (height2 * height2);
+}
+let bmiResult2 = calculateBmi(weight2, height2).toFixed(2);
+console.log(bmiResult2,'BMI wg podanych danych');
+console.log("  ")
+if (bmiResult2 <= 18.5) {
+  console.log(`Twój wzrost ${height2}, Twoja waga to ${weight2}, Twoje BMI wynosi ${bmiResult2}, Twoje BMI jest zbt niskie`);
+} else if (bmiResult2 >= 25) {
+  console.log(`Twój wzrost ${height2}, Twoja waga to ${weight2},Twoje BMI wynosi ${bmiResult2}, Twoje BMI jest zbyt wysokie`);
+} else {
+  console.log(`Twój wzrost ${height2}, Twoja waga to ${weight2},Twoje BMI wynosi ${bmiResult2} i jest to wynik prawidłowy`);
+}
+
+    </script>
 </body>
 
 </html>

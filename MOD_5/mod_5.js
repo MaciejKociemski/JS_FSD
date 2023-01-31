@@ -1,4 +1,4 @@
-//1
+//1 Wykonaj refaktor metod obiektu pizzaPalace, wstawiając brakujące this w miejscach zwracania się do właściwości i metod obiektu.
 
 const pizzaPalace = {
     pizzas: ["Supercheese", "Smoked", "Four meats"],
@@ -19,7 +19,9 @@ const pizzaPalace = {
   };
 
   
-  //2
+  //2 Przed zwolnieniem programista popsuł kod źródłowy zarządzania kontami użytkowników naszego serwisu dostawy jedzenia. Wykonaj refaktor metod obiektu customer, umieszczając brakujące this przy zwracaniu się do właściwości obiektu.Po zadeklarowaniu obiektu dodaliśmy wywołanie metod w tej kolejności, w jakiej twój kod będą sprawdzać testy. Prosimy niczego tam nie zmieniać.
+
+
   const customer = {
     username: "Mango",
     balance: 24000,
@@ -45,7 +47,8 @@ const pizzaPalace = {
     // Change code above this line
   };
   
-//3
+//3 Testerzy znaleźli błędy w kodzie serwisu zapisywania historii zamówień jedzenia. Napraw je, prawidłowo rozmieszczając this w metodach obiektu historyService, aby metody zaczęły pracować poprawnie.
+
 const historyService = {
     orders: [
       { email: "jacob@hotmail.com", dish: "Burrito" },
@@ -71,7 +74,8 @@ const historyService = {
     // Change code above this line
   };
 
-  //4
+  //4 Zmień kod tak, aby obiekt parent został prototypem dla obiektu w zmiennej сhild
+
   const parent = {
     name: "Stacey",
     surname: "Moore",
@@ -86,7 +90,8 @@ const historyService = {
   child.name = "Jason";
   child.age = 27;
 
-  //5
+  //5 Zmień kod, budując łańcuch prototypów tak, aby obiekt ancestor był prototypem dla parent, a ten w swojej kolejności był prototypem dla child.
+
   const ancestor = {
     name: "Paul",
     age: 83,
@@ -106,10 +111,10 @@ const historyService = {
   
   // Change code above this line
 
-  //6
+  //6 Wykorzystując kluczowe słowo class zadeklaruj klasę Car z pustym ciałem.
   class Car{}
 
-  //7
+  //7 Dodaj klasie Car metodę constructor która przyjmuje trzy parametry:brand - marka samochodu.model - model samochodu.price - cena samochodu.Klasa Car powinna tworzyć obiekt z jednoimiennymi właściwościami brand, model i price, wartościami których powinny być argumementy podane w czasie jego wywołania z operatorem new.
   class Car {
     // Change code below this line
   constructor(brand,model,price){
@@ -121,7 +126,7 @@ const historyService = {
     // Change code above this line
   }
 
-  //8
+  //8 Wykonaj refaktor klasy Car tak, aby przyjmował jeden parametr – obiekt z właściwościami brand, model i price. Dokonaj destrukturyzacji obiektu w sygnaturze (podpisie) konstruktora.
   class Car {
     // Change code below this line
     constructor({ brand, model, price }) {
@@ -133,7 +138,7 @@ const historyService = {
 }
 
 
-//9
+//9 Dodaj klasie Car dwie metody.getPrice() - zwraca wartość właściwości price z obiektu, który będzie go wywoływać.changePrice(newPrice) - odnawia wartość właściwości price w obiekcie, który będzie go wywoływał na newPrice.
 class Car {
     constructor({ brand, model, price }) {
         this.brand = brand;
@@ -152,7 +157,7 @@ class Car {
     // Change code above this line
 }
 
-//10
+//10 Napisz klasę Storage, która będzie tworzyć obiekty dla zarządzania magazynem towarów. Klasa oczekuje tylko jednego argumentu – początkowej tablicy towarów, który zapisuje się na tworzonym obiekcie we właściwości items.Zadeklaruj następujące metody klasy:getItems() - zwraca tablicę aktualnych towarów we właściwości items obiektu, który wywołuje tę metodę.addItem(newItem) - przyjmuje nowy towar newItem i dodaje go do tablicy towarów we właściwości items obiektu, który wywołuje tę metodę.removeItem(itemToRemove) - przyjmuje towar itemToRemove i usuwa go z tablicy towarów we właściwości items obiektu, który wywołuje tę metodę.Pod komentarzem dodaliśmy inicjalizację egzemplarza i wywołanie metod w tej kolejności, w której twój kod będą sprawdzać testy. Prosimy nieczego tam nie zmieniać.
 class Storage {
     constructor(items) {
         this.items = items;
@@ -177,7 +182,7 @@ console.log(storage2.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"
 storage2.removeItem("Prolonger");
 console.log(storage2.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-//11
+//11 Napisz klasę StringBuilder, która przyjmuje jeden parametr initialValue - dowolny łańcuch, który zapisuje się na tworzonym obiekcie we właściwości value.Zadeklaruj następujące metody klasy:getValue() - zwraca aktualne znaczenie właściwości value.padEnd(str) - przyjmuje parametr str (łańcuch) i dodaje go na końcu wartości właściwości value obiektu, który wywołuje tę metodę.padStart(str) - otrzymuje parametr str (łańcuch) i dodaje go na początku wartości właściwości value obiektu, który wywołuje tę metodę.padBoth(str) - otrzymuje parametr str (łańcuch) i dodaje go na początku i na końcu wartości właściwości value obiektu, który wywołuje tę metodę.Pod komentarzem dodaliśmy inicjalizację egzemplarza i wywołanie metod w tej kolejności, w której twój kod będą sprawdzać testy. Prosimy nieczego tam nie zmieniać.
 class StringBuilder {
     constructor(value) {
         this.value = value;
@@ -208,7 +213,7 @@ builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
 
 
-//12
+//12 Wykonaj refaktor klasy Car tak, aby właściwość brand była prywatna i dodaj dwie metody do publicznego interfejsu, dla czytania i zmieniania tej właściwości.getBrand() - zwraca wartość prywatnej właściwości brand.changeBrand(newBrand) - zmienia wartość prywatnej właściwości brand na newBrand.
 class Car {
     // Change code below this line
     #brand
@@ -228,7 +233,7 @@ class Car {
 }
 
 
-//13
+//13 Wykonaj refaktor klasy Storage, czyniąc argument items prywatnym.Pod komentarzem dodaliśmy inicjalizację egzemplarza i wywołanie metod w tej kolejności, w której twój kod będzie testowany. Prosimy niczego tam nie zmieniać.
 class Storage {
     // Change code below this line
     #items
@@ -258,7 +263,7 @@ console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator",
 storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
 
-//14
+//14 Wykonaj refaktor klasy StringBuilder, czyniąc właściwość value prywatną.Pod komentarzem dodaliśmy inicjalizację egzemplarza i wywołanie metod w tej kolejności, w której twój kod będzie testowany. Prosimy niczego tam nie zmieniać.
 class StringBuilder {
     // Change code below this line
   #value
@@ -295,7 +300,7 @@ class StringBuilder {
   console.log(builder2.getValue()); // "=^.^="
   
 
-  //15
+  //15 Wykonaj refaktor klasy Car. Uczyń właściwości model i price prywatnymi, tak samo jak #brand. Standaryzuj publiczny interfejs klasy, zamieniając już zadeklarowane metody na gettery i settery brand, model i price dla interakcji z prywatnymi właściwościami.
   class Car {
     // Change code below this line
     #brand;
@@ -334,7 +339,7 @@ class StringBuilder {
 }
 
 
-//16
+//16 Wykonaj refaktor klasy Car. Dodaj publiczną statyczną właściwość MAX_PRICE z wartością 50000 - maksymalna możliwa cena samochodu.Dodaj do settera price sprawdzenie przekazywanej wartości parametru newPrice. Jeśli wynosi więcej niż MAX_PRICE, setter niczego nie zrozbi, a jeśli mniej lub równo, wtedy nadpisuje cenę samochodu.
 class Car {
     // Change code below this line
     static MAX_PRICE = 50000;
@@ -368,7 +373,7 @@ audi.price = 51000;
 console.log(audi.price); // 49000
 
 
-//17
+//17 Dodaj do klasy Car publiczną metodę statyczną checkPrice(price), przyjmującą cenę samochodu. Metoda powinna porównać wartości parametru price i prywatnej statycznej właściwości MAX_PRICE.Jeżeli cena samochodu przewyższa maksymalną, metoda powinna zwrócić łańcuch "Error! Price exceeds the maximum".W przeciwnym yrazie metoda powinna zwrócić łańuch "Success! Price is within acceptable limits".Pod zadeklarowaniem klasy dodaliśmy inicjalizację egzemplarza i wywołanie metod, aby pokazać, jak wykorzystywana będzie metoda checkPrice(price).
 class Car {
     static MAX_PRICE = 50000;
     // Change code below this line
@@ -393,7 +398,7 @@ const bmw = new Car({ price: 64000 });
 console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
 console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
 
-//18
+//18 W aplikacji potrzebny jest administrator z możliwością dodawania poczty użytkowników do czarnej listy.Zadeklaruj klasę Admin, która dziedziczy od klasy UserDodaj do klasy Admin publiczną właściwość statyczną AccessLevel (poziom dostępu), wartością której jest obiekt { BASIC: "basic", SUPERUSER: "superuser" }
 class User {
     constructor(email) {
       this.email = email;
@@ -415,7 +420,7 @@ class User {
                   }
               }
 
-//19
+//19 Dodaj klasę Admin metodę constructor, która przyjmuje jeden parametr – obiekt ustawień z dwiema właściwościami email i accessLevel. Dodaj klasę Admin publiczną właściwość accessLevel, wartość której będzie przekazywana przy wywołaniu konstruktora.Aby pokazać, jak używa się klasy Admin, dodaliśmy inicjalizację egzemplarza pod zadeklarowaniem klasy.
 class User {
     email;
   
@@ -454,7 +459,7 @@ class User {
   console.log(mango.accessLevel); // "superuser"
 
   
-  //20
+  //20 Dodaj klasie Admin następujące właściwości i metody.Publiczną właściwość blacklistedEmails dla przechowywania czarnej listy adresów pocztowych użytkowników. Wartość domyślna to pusta tablica.Publiczną metodę blacklist(email) dla dodania poczty na czarną listę. Metoda powinna dodawać wartości parametru email do tablicy zapisującej się we właściwości blacklistedEmails.Publiczną metodę isBlacklisted(email) dla sprawdzenia poczty na czarnej liście. Metoda powinna sprawdzać obecność wartości parametru email w tablicy zapisującej się we właściwości blacklistedEmails i zwracać true lub false.Po zadeklarowaniu klasy dodaliśmy inicjalizację egzemplarza i wywołanie metod w tej kolejności, w której twój kod będzie testowany. Prosimy niczego tam nie zmieniać.
 
   class User {
     email;
