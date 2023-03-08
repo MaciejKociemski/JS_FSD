@@ -12,6 +12,7 @@
 <body>
     <script>
 
+
 // Deklaracja funkcji - funkcje tworzymy za pomoca slowa kluczowego FUNCTION
 
 // Deklaracja funkcji przyjmuje dwa parametry, ktore mozemy uzyc tylko wewnatrz funkcji
@@ -25,14 +26,17 @@ function addition(a, b) {
 }
 addition (1, 2);
 addition (212, 415);
+addition(10,-10);
+
 
 
 function multiply(a, b) {
     let result = a * b;
     return result;
 }
-let multiplyResult = multiply(5, 10);
+let multiplyResult = multiply(5, 11);
 console.log("Wynik mnożenia: ", multiplyResult)
+
 
 // ćWICZENIA
 
@@ -41,6 +45,7 @@ function multiply2(a, b, c) {
     return result
     // mnożna tez zapisać to samo tak => return a * b * c;
 }
+
 
 let multiply2Result = multiply2 (2, 3, 10);
 console.log(multiply2Result);
@@ -57,7 +62,8 @@ let resultSubstract = substract(10, 7);
 console.log(resultSubstract);
 
 function getSomeNumber(){
-    return 79;
+    return 711;
+
 }
 console.log(getSomeNumber()) // 79
 
