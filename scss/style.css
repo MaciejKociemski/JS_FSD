@@ -132,8 +132,11 @@ ul {
 
 button {
   display: inline-flex;
-  padding: 8px 12px;
+  margin-top: 30px;
+  padding: 10px 12px;
   cursor: pointer;
   font-family: inherit;
   text-transform: uppercase;
 }
+/* 
+.listenerBtn{width: 100px;border-radius: 10px;} */
