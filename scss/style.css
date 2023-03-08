@@ -137,7 +137,9 @@ button {
   cursor: pointer;
   font-family: inherit;
   text-transform: uppercase;
-  color: yellowgreen;
+  color: #ffffff;
+  background-color: rebeccapurple;
+  
 }
 /* 
 .listenerBtn{width: 100px;border-radius: 10px;} */
