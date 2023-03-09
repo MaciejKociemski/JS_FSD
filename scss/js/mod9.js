@@ -127,3 +127,44 @@ console.log(Date.now());
 console.log(Date.now());
 console.log(Date.now());
 console.log(Date.now());
+
+
+const date10 = new Date("March 16, 2030 14:25:00");
+
+console.log(date10.toString());
+// "Sat Mar 16 2030 14:25:00 GMT+0200 (Eastern European Standard Time)"
+
+console.log(date10.toTimeString(),date10.toLocaleTimeString,date10.toDateString);
+// "14:25:00 GMT+0200 (Eastern European Standard Time)"
+
+date10.toLocaleTimeString();
+// "2:25:00 PM"
+
+date10.toUTCString();
+// "Sat, 16 Mar 2030 12:25:00 GMT"
+
+date10.toDateString();
+// "Sat Mar 16 2030"
+
+date10.toISOString();
+// "2030-03-16T12:25:00.000Z"
+
+date10.toLocaleString();
+// "3/16/2030, 2:25:00 PM"
+
+date10.getTime();
+// 1899894300000
+
+
+
+// Unix module
+
+const init = Date.now();
+const fromUnix = (unix) => new Date(unix);
+const toUnix = (date) => Date.parse(date);
+
+const Unix = { init, fromUnix, toUnix };
+
+export default Unix;
+
+console.log(Unix)
