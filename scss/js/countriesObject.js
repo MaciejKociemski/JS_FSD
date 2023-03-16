@@ -16,3 +16,18 @@ flags: { svg: "https://en.wikipedia.org/wiki/Estonia#/media/File:Flag_of_Estonia
 languages: ["Estonian"],
 },
 ]
+
+
+
+
+
+// [
+// {
+//  capital: String,
+// flags: { svg: String },
+// id: Integer,
+// languages: [String]
+// name: { official: String }
+// population: Integer
+// }
+// ]
