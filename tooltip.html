@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Przykład tooltipu</title>
+	<style>
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black; /* dodajemy kreskę pod tooltipem */
+			}
+
+		.tooltip .tooltiptext {
+            font-size: 12px;
+			visibility: hidden; /* ukrywamy tekst tooltipu */
+			width: 120px;
+			background-color: blue;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+
+			/* ustalamy pozycję tooltipu */
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -60px;
+
+			/* animacja pojawiania się tooltipu */
+			opacity: 0;
+			transition: opacity 0.3s;
+			}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible; /* pokazujemy tekst tooltipu po najechaniu kursorem na element */
+			opacity: 1;
+			}
+	</style>
+</head>
+<body>
+
+	<h2>Przykład tooltipu</h2>
+	<p>Przykładowy tekst <span class="tooltip">z tooltipem<span class="tooltiptext">To jest przykładowy tekst tooltipu.</span></span>.</p>
+
+</body>
+</html>
