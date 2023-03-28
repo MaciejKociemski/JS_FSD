@@ -1,0 +1,35 @@
+/* Ustawienie stylów dla kontenera tekstu */
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #ffffff;
+}
+
+/* Ustawienie stylów dla samego tekstu */
+.message {
+  font-size: 36px;
+  font-weight: bold;
+  color: #615a5a;
+  animation: slideAndColor 5s ease-in-out infinite;
+}
+
+/* Definiowanie animacji */
+@keyframes slideAndColor {
+  0% {
+    color: #524b4b;
+    background-color: #ffffff;
+    transform: translateX(0);
+  }
+  50% {
+    color: #ffffff;
+    background-color: #3d3636;
+    transform: translateX(-60%);
+  }
+  100% {
+    color: #656060;
+    background-color: #ffffff;
+    transform: translateX(0);
+  }
+}

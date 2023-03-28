@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><link href="./scss/css/igo.css" rel="stylesheet"/>
+	<title>Wyświetlanie napisu po naciśnięciu przycisku</title>
+	<style>
+		#message {
+			font-size: 5em;
+			text-align: center;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+
+	<h2>Wyświetlanie napisu po naciśnięciu przycisku</h2>
+	<button type="button" onclick="showMessage()">Wyświetl napis</button>
+	<div id="message"></div>
+
+	<script>
+		// Funkcja wyświetlająca napis "Igor" po kliknięciu przycisku
+		function showMessage() {
+			document.getElementById("message").innerHTML = "Igor";
+		}
+	</script>
+
+</body>
+</html>

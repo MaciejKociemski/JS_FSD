@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  transition: background 2s ease;
+}
+
+#message {
+  font-size: 20em;
+  text-align: center;
+  margin-top: 100px;
+  opacity: 0;
+  animation: fadeIn 5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+

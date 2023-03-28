@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zmiana koloru tła po naciśnięciu przycisku</title>
+	<style>
+		body {
+			background-color: #fff;
+		}
+
+		.highlight {
+			background-color: #ff0;
+		}
+	</style>
+</head>
+<body>
+
+	<h2>Zmiana koloru tła po naciśnięciu przycisku</h2>
+	<button type="button" id="Btn" class="elementBtn">przycisk</button>
+
+	<script>
+		// Pobieramy przycisk po jego id
+		var btn = document.getElementById("Btn");
+
+		// Dodajemy nasłuchiwanie na zdarzenie kliknięcia
+		btn.addEventListener("click", function() {
+			// Zmieniamy kolor tła elementu body
+			document.body.classList.toggle("highlight");
+		});
+	</script>
+
+</body>
+</html>
