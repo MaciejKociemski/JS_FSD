@@ -179,3 +179,37 @@ addItemForm.addEventListener("submit", (e) => {
 
 // START
 renderApp();
+
+//
+
+
+
+
+const planettoUpperCase = planets.map(planet=>planet.toUpperCase)
+console.log(...planetsUpperCase)
+console.log(planetsUpperCase)
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json())
+  .then(posts => console.log(posts))
+  .catch(error => console.log(error));
+
+//
+const postToAdd = {
+  author: "Mango",
+  body:"Crud is awsome",
+}
+  
+console.log(postToAdd)
+
+const options = {
+  method: "POST",
+  body: JSON.stringify(postToAdd),
+  Headers: {
+    "content -type": "application/json; charset=UTF-8",
+  }
+};
+fetch("https://jasonplaceholder.typicode.com/posts", options)
+  .then(response => response.json())
+  .then(post => console.log(post))
+  .catch (error => console.log(error));
