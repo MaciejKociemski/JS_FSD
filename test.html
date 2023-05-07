@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href = "scss/css/igo.css" rel="stylesheet">
+    <title>EXCERCISES</title>
 </head>
-<body>
+<body><a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus vitae quam dolor ipsa corporis eius, natus et doloribus saepe est iusto officia ea inventore, mollitia praesentium id sequi voluptatum repudiandae cupiditate! Eveniet quis tempora, inventore repudiandae nam voluptate sit quos deserunt, veniam fugiat molestias veritatis eum quia aliquam fugit commodi reprehenderit modi numquam, culpa corporis. Exercitationem ut nesciunt, nisi quis voluptatum velit possimus neque labore eaque, magni et? Cum quod voluptatum ipsum sint temporibus repudiandae, sunt corporis tempora doloribus in fuga nemo voluptates nisi nam inventore eos omnis rem nobis veniam nulla impedit quas voluptas. Animi asperiores sequi mollitia numquam magnam eligendi dolorum quaerat eveniet, reiciendis fugiat, doloremque laudantium at quam quia ipsam, cumque hic eius molestiae tempore optio tempora distinctio similique iste! Exercitationem odit ipsum impedit illum odio rerum, tempora laboriosam expedita cumque. Odit accusamus, dolore aspernatur quod at consequuntur, quae necessitatibus fuga doloremque vel impedit omnis dignissimos neque architecto eos itaque! Illum, repellat! Temporibus saepe necessitatibus illo eaque quae laudantium amet beatae rem? Amet nisi quis aliquam doloribus nobis, itaque suscipit neque, perspiciatis vero nostrum dolores at earum a? Modi itaque nemo dolores mollitia quos at totam? Maiores accusantium tenetur a optio qui porro sint sequi, nobis rem perspiciatis, adipisci officia itaque error sed. Eaque sint qui minus pariatur, obcaecati expedita excepturi aliquam voluptate necessitatibus, fugiat ut tempore. Debitis voluptatem nam, ut officiis, fugiat impedit omnis iure quaerat quisquam esse amet! Magnam maiores enim nobis in eveniet architecto exercitationem esse vel sed excepturi illo veniam vero, impedit numquam explicabo provident tempore doloribus delectus itaque dicta? Nostrum sed dignissimos deserunt dolorem placeat quae autem labore. Eveniet accusamus, quod tenetur laudantium architecto aliquid, ex quae impedit modi aliquam eligendi nemo! Quo nisi quis asperiores distinctio quam voluptatum mollitia suscipit ab, quia expedita tempora enim est? Asperiores officiis quidem sunt nulla numquam officia, aperiam, nisi totam architecto amet velit illo adipisci libero, ipsa corrupti! Aspernatur pariatur odio illo, molestias, modi, quae eius enim ducimus sed nobis minima repudiandae ipsum veritatis aut suscipit. Repudiandae consequatur unde quaerat voluptatibus perspiciatis, architecto aut ex minima asperiores reprehenderit tempore magnam quisquam fugiat, dignissimos ipsa iure, provident itaque aliquid. Blanditiis sint quibusdam sunt fugiat, maxime dolores temporibus, ipsam, vitae doloribus fuga officiis quasi error voluptatem! Iure dolor cum repudiandae veniam facilis eos velit ipsa quasi, vel ullam ratione impedit minima, ex nobis unde sunt a perferendis illo magni accusamus. Eum, id recusandae. Magni itaque asperiores, reprehenderit pariatur explicabo eum mollitia aut reiciendis nihil ducimus perferendis sed temporibus! Illo error, libero, quaerat porro officia veritatis ea dolorem minus nostrum rem reprehenderit, nisi odio maiores! Reprehenderit earum tenetur facere eum nulla veritatis iusto aliquam ducimus, eaque id dolorum, animi cum molestias asperiores? Ipsam nemo, quidem odio soluta optio quas eum et veniam nisi repudiandae aut in error ut voluptatem recusandae corporis consequuntur exercitationem, porro, provident quo explicabo dolorem. Cum optio expedita sit saepe accusantium impedit, laudantium sint obcaecati pariatur totam consectetur, provident sed eaque ex ad libero voluptate nobis at! Ut iusto quam iure atque voluptates. Officia?
+</a>
     <script>
         // const productName="droid";
         // console.log(productName);
@@ -277,13 +279,7 @@ function checkPassword(password){
     console.log((checkPassword("jajko")));
     console.log((checkPassword("jajk")));
     console.log(checkPassword(null));
-    console.log((checkPassword("jajko")));
-    console.log((checkPassword("jajk")));
-    console.log(checkPassword(null));
-    console.log((checkPassword("jajko")));
-    console.log((checkPassword("jajk")));
-    console.log(checkPassword(null));
-
+    
 
     function checkStorage(avaiable,ordered){
         let zostalo = (avaiable-ordered);
@@ -295,7 +291,7 @@ else{message=`ok, twoje zamowienie zostanie zrealizowane, zamówiłeś własnie 
 return message}
 
     console.log(checkStorage(100,1))
-    console.log(checkStorage(100,130))
+    console.log(checkStorage(10,130))
     console.log(checkStorage(100,96))
     console.log(checkStorage(200,199))
     console.log(checkStorage(20,199))
@@ -346,9 +342,378 @@ console.log(checkIfCanAccessContent("v"))
 console.log(checkIfCanAccessContent("pro"))
 console.log(checkIfCanAccessContent("vip"))
 console.log(checkIfCanAccessContent("starter"))
+//
+function isNumberNotInRange(start,end,number){
+    const isInRange = number >= start && number <= end;
+const isNotInRange = !isInRange;
+
+    return isNotInRange;
+}
+console.log(isNumberInRange(10,30,5));
+
+
+
+//
+function getDiscount(totalSpend){
+    let discount;
+    const baseDiscount = 0;
+    const bronzeDiscount = 0.02;
+    const silverDiscount = 0.05;
+    const goldDiscount = 0.1;
+    if(totalSpend >=50000){
+        discount=goldDiscount
+    }else if(totalSpend>=20000){
+        discount=silverDiscount;
+    }else if(totalSpend>=5000){
+        discount=bronzeDiscount
+    } else{discount=baseDiscount}
+
+
+    return discount;
+}
+
+
+
+console.log(getDiscount(21000))
+console.log(getDiscount(2000))
+console.log(getDiscount(1300))
+console.log(getDiscount(20000))
+console.log(getDiscount(21000))
+console.log(getDiscount(50000))
+
+//
+let type;
+const aged = 19;
+
+if(aged >=18){
+    type = 'is Adult'
+} else {type='child'}
+console.log(type)
+console.log()
+
+const aged2 =20;
+const type2 = aged2 >=18 ? "adult": "child"
+console.log(type2)
+
+//
+
+function checkStorage (avaiable, ordered){
+    let message;
+
+    message = ordered > avaiable ? "za duzo zamowiles nie mamy tyle" : `zrealizujemy twoje zamowienie w ilosci ${ordered}`
+
+return message
+}
+console.log(checkStorage(100,50))
+console.log(checkStorage(10,50))
+
+
+
+function checkPassword (password){
+    const adminPassword = "jquery" 
+    let message;
+    switch(password){
+        case null:message = "camceled by User!";
+        break;
+        case adminPassword:
+        message = "welcome";
+        break;
+        default:message= "accsess denied"
+    }
+
+    return message;
+}
+
+console.log(checkPassword("jquery"))
+console.log(checkPassword("mango"))
+console.log(checkPassword("werty"))
+console.log(checkPassword("jquery"))
+
+// switch case 
+if (type === "starter") {
+  price = 0;
+} else if (type === "professional") {
+  price = 20;
+} else if (type === "organization") {
+  price = 50;
+}
+console.log();
+
+function getSubscriptionPrice(type){
+  let price 
+  
+  switch(type){
+    case "starter": 
+    price = 0;
+    break;
+
+    case "professional": 
+    price = 100;
+    break;
+
+    case "organization": 
+    price = 200;
+    break;
+
+
+    return price
+  }
+}
+console.log(getSubscriptionPrice("organization"));
+
+//
+
+function getShippingCost (country) {
+    let message;
+    switch(country){
+        case "China": price = 1000;
+        message=`you order ${country} will cost ${price} dollars`;
+        break;
+
+        case "Japan": price = 2000;
+        message = `you order ${country} will cost ${price} dollars`;
+        break;
+
+        case "USA":price = 5000;
+        message = `you order more expecsive country ${country}, will cost ${price}`;
+        break
+        default: message = `sorry is not delivery to this country`
+    }
+
+
+
+
+    return message;
+}
+
+
+console.log("maciej".length)
+
+console.log(getShippingCost("USA"))
+console.log(getShippingCost("Poland"))
+console.log(getShippingCost("Japan"))
+console.log(getShippingCost("China"))
+console.log(getShippingCost("USA"))
+console.log(getShippingCost("Madagaskar"))
+
+//
+const productName = "repair droidos"
+console.log(productName.length)
+
+//
+function getNameLength(name){
+    let message = `imie ktore wpisales czyli ${name} ma w sobie  ${name.length} liter`
+return message
+}
+
+console.log(getNameLength("maciek"))
+console.log(getNameLength("dalajlama"))
+console.log(getNameLength("konstantynopolitanczykiewiczówna"))
+console.log(getNameLength("igor"))
+console.log(getNameLength("agnieszka"))
+console.log(getNameLength("maciek"))
+console.log(getNameLength("dalajlama"))
+console.log(getNameLength("konstantynopolitanczykiewiczówna"))
+console.log(getNameLength("igor"))
+console.log(getNameLength("agnieszka"))
+console.log(getNameLength("maciek"))
+console.log(getNameLength("dalajlama"))
+console.log(getNameLength("konstantynopolitanczykiewiczówna"))
+console.log(getNameLength("igor"))
+console.log(getNameLength("agnieszka"))
+
+//stringi veryfications
+const nameAndSurname = "Janina Kowalska";
+console.log(nameAndSurname[0]);
+console.log(nameAndSurname[1]);
+console.log(nameAndSurname[2]);
+console.log(nameAndSurname[3]);
+console.log(nameAndSurname[4]);
+console.log(nameAndSurname[5]);
+console.log(nameAndSurname[6]);
+console.log(nameAndSurname[7]);
+console.log(nameAndSurname[8]);
+console.log(nameAndSurname[9]);
+console.log(nameAndSurname[10]);
+console.log(nameAndSurname[11]);
+
+console.log(nameAndSurname.length)
+console.log(...nameAndSurname)
+
+
+const courseTopic="JavaScript essentials"
+const courseTopicLength = courseTopic.length
+const firsElement = courseTopic[0];
+const lastElement= courseTopic[courseTopic.length-1];
+
+const reTopic =courseTopic
+
+
+
+console.log(courseTopic);
+console.log(courseTopicLength)
+console.log(firsElement)
+console.log(lastElement)
+console.log(reTopic)
+
+//slice
+
+const nameProduct = "repair droid";
+console.log(nameProduct)
+console.log(nameProduct.slice(0,2))
+console.log(nameProduct.slice(2,4))
+console.log(nameProduct.slice(4,6))
+console.log(nameProduct.slice(6,12))
+console.log(nameProduct.slice(0,nameProduct.length))
+
+
+function getSubstring(string, length){
+    const substring = string.slice(0,length);
+
+    return substring
+}
+
+console.log(getSubstring("lorem ipsum lorem ipsum",15))
+console.log(getSubstring("lorem ipsum lorem ipsum",25))
+
+
+function formatMessage(message, maxLength){
+   let result;
+
+   if(message.length<=maxLength){
+    result=message;
+   }
+   else{message = message.slice(0,maxLength)
+result=message+"..."}
+
+return result
+}
+console.log(formatMessage("maciej maciej lorem ipsum"))
+console.log(formatMessage("maciej maciej lorem ipsum lorem "))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum"))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum maciej"))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum maciej maciej"))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum maciej maciej lorem "))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum maciej maciej lorem ipsum "))
+console.log(formatMessage("maciej maciej lorem ipsum lorem ipsum maciej maciej lorem ipsum lorem maciej ipsum"))
+
+//
+console.log("maciek");
+const brandName="SaMsUNG"
+console.log(brandName);
+console.log(brandName.length);
+console.log(brandName.toLowerCase())
+console.log(brandName.toUpperCase())
+//
+
+console.log(productName)
+console.log(productName.includes("air"))
+console.log(productName.includes("air"))
+
+function checkForName(fullname, name){
+
+    const result=fullname.includes(name)
+    return result
+    
+}
+console.log(checkForName("Maciej Kociemski","Maciej"))
+console.log(checkForName("Macie Kociemski","Maciej"))
+
+// last excersise from modul 1
+function checkForSpam(message){
+let result;
+
+const normalizedMessage =  message.toLowerCase();
+result = normalizedMessage.includes('sale') || normalizedMessage.includes('spam');
+    return result
+}
+console.log(checkForSpam("Latest technology news "))
+console.log(checkForSpam("Latest technology news "))
+console.log(checkForSpam("Sale technology news "))
+console.log(checkForSpam("Spam technology news "))
+;
+//
+function includes(array,value){
+    for(const index of array){
+        if(index===value){
+            return true
+        }
+    } return false
+}
+
+console.log(includes([1,2,3,4,5],3))
+console.log(includes([1,2,3,4,5],2))
+console.log(includes([1,2,3,4,5],7))
+console.log(includes(["mars","jowisz","saturn","uran","neptun"],7))
+console.log(includes(["mars","jowisz","saturn","uran","neptun"],"uran"))
+
+
+function checkAge (age){
+    let message;
+    if(age>=18){
+        message = `jestes pelnoletni , masz ${age} lat`}
+        else{message = `nie jestes jeszcze pelnoletni, brakuje ci ${18-age} lat`}
+
+        return message
+    }
+
+console.log(checkAge(18));
+console.log(checkAge(8));
+console.log(checkAge(21));
+console.log(checkAge(1));
+
+
+//
+
+function checkPassword(password){
+    const adminPassword = "asdf"
+    
+    if (password === adminPassword){
+        return ("welcome");
+    }
+    return("access denied")
+}
+
+console.log(checkPassword("asd"))
+console.log(checkPassword("asdf"))
+console.log(checkPassword("asdf"))
+console.log(checkPassword("asdf"))
+
+//
+
+function checkStorage(avaiable,ordered){
+if(ordered === 0){
+    return "twoje zamowienie jest puste";
+}
+if (ordered > avaiable){
+    return "twoje zamowienie jest za duze w stosunku do dostępności produktów"
+}
+return "ok, realizujemy twoje zamówienie"};
+
+console.log(checkStorage(100,50));
+console.log(checkStorage(200,250));
+console.log(checkStorage(100,0));
+console.log(checkStorage(100,0));
+console.log(checkStorage(100,0));
+
+const planets =["earth","mars","moon"];
+console.log(planets);
+console.log(...planets[1]);
+console.log(planets[1]);
+console.log(planets[2]);
+
+//
+const fruits = ["apple","plum","pear","orange"]
+
+console.log(fruits)
+console.log(fruits[1])
+console.log(fruits[2])
+console.log(fruits[0])
+console.log(...fruits[0,1,2,3])
 
 
 
     </script>
 </body>
+
 </html>

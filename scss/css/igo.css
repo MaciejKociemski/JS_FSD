@@ -1,6 +1,8 @@
 body {
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+ background-image: radial-gradient(white 50%, transparent 50%, rgb(111, 117, 236) 80%);
   transition: background 2s ease;
+  font-size: 14px;
+  
 }
 
 #message {

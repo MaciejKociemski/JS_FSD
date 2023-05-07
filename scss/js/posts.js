@@ -1,10 +1,10 @@
-//ta aplikacja jest zdecydowanie duzo blizsza temu, co kazdy Junior powinien umiec napisac. (Jezeli ma tak jasna strukture, to zostanie bardzo doceniony na rozmowach. Ale nic sie nie stanie, jesli struktura jest bardziej "juniorska".)
+//ta aplikacja jest zdecydowanie duzo blizsza temu, co kazdy Junior powinien umiec napisac. (Jezeli ma tak jasna strukture, to zostanie bardzo doceniony na rozmowach. Ale nic sie nie stanie, jesli struktura jest bardziej "juniorska".) crud /create read update delete/
 
 
 const postsDOM = document.querySelector("#posts");
 
 // Data (Model)
-let posts = [{ id: 1, title: "Hello world", autor: "Mr Programista" }];
+let posts = [{ id: 1, title: "Hello world", author: "Mr Programista" }];
 
 // Fns
 // Create
@@ -23,10 +23,10 @@ const deletePost = (id) => {
 
 createPost({ id: 2, title: "1984", author: "George Orwell" });
 createPost({ id: 3, title: "Red Book", author: "Carl Gustav Jung" });
-updatePost(2, { id: 2, title: "Ninteen-eighty Four", author: "George Orwell" });
+updatePost(1, { id: 2, title: "Ninteen-eighty Four", author: "George Orwell" });
 deletePost(1);
 
 // Read
 posts.forEach((post) => {
-  postsDOM.innerHTML += `<li>${post.title} by ${post.author}</li>`;
+  postsDOM.innerHTML += `<h1>${post.title} by ${post.author}</h1>`;
 });
