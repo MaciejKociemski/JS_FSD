@@ -1,8 +1,9 @@
 // function n+2
 let add2 = (n) => n + 2;
 console.log(add2(2))
-
 console.log(1)
+
+
 
 
 
@@ -16,8 +17,7 @@ console.log(square(4))
 // function for 2 to 10 square with for 
 function squareLoop() {
   let result=[];
-  for (let i=2;i<=20
-    ;i++)
+  for (let i=2;i<=20;i++)
   {result.push(i*i)
   }
 return result;
@@ -28,22 +28,17 @@ console.log(squareLoop());
 // result spreed , not array
 console.log(...squareLoop())
 
-
-
 //Oto kilka przykładów prostych funkcji strzałkowych:
 //Funkcja, która dodaje dwie liczby:
 
 let add = (a, b) => a + b;
 console.log(add(2, 3)); // wynik: 5
 
-
 //Funkcja, która zwraca tekst powitalny dla danego użytkownika:
 let greet = (name) => `Witaj, ${name}!`;
 console.log(greet("Anna")); // wynik: "Witaj, Anna!"
 
-
 //Funkcja, która zwraca true, jeśli podana liczba jest parzysta, lub false, jeśli jest nieparzysta:
-
 
 let isEven = (num) => num % 2 === 0;
 console.log(isEven(4)); // wynik: true
