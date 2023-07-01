@@ -16,14 +16,14 @@
 
 Number.MAX_VALUE; //maksymalna pozytywna wartość
 Number.MIN_VALUE; //namniejsza wartość większa od zera
-
+console.log(Number.MIN_VALUE)
 Number.isNaN(NaN); //czy jest Not a Number
 
-Number.parseFloat("4.678gfgfg"); // zamiana stringa na liczbę dziesiętną: 4.678
+console.log(Number.parseFloat("4.678gasa11fgfg")); // zamiana stringa na liczbę dziesiętną: 4.678
 
-Number.parseInt("3456"); // liczba całkowita ze stringa 3456
+console.log(Number.parseInt("345a6")); // liczba całkowita ze stringa 3456
 
-Number.isInteger(10 / 5); //true; czy liczba całkowita
+console.log(Number.isInteger(10 / 5)); //true; czy liczba całkowita
 Number.isInteger(20 / 3); //false, 
 
 2.23456.toFixed(3); // skraca liczbę do podanej w nawiasie liczby po przecinku oraz zaokrągla ją = 2.235
@@ -39,7 +39,7 @@ Math.round(204.1234); //204
 
 // toFixed zaokrągla do podanej ilości cyfr po przecinku
 v.toFixed(); //205
-1.469.toFixed(2);  // 1, 47
+console.log(1.46911213131.toFixed(5));  // 1, 47
 
 var a = 3.593;
 a.toFixed(); // 4
@@ -72,9 +72,9 @@ parseInt("786sdsdsd"); //786
 //nigdy nie b == NaN lub b === NaN -> bo zwróci nam false
 
 b = 0/0;
-isNan(b) // true
+// isNan(b) // true
 b == NaN;  // nieprawidłowy false
-b === NaN; // nieprawidłowy false
+console.log(b === NaN); // nieprawidłowy false
 
 
 //Infinity

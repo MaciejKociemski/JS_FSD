@@ -75,7 +75,7 @@ if(str.indexOf("ma", 22) >= 0 ) console.log("jest"); // sprawdzamy czy dna fraza
 
 //wyrazenie regularne dla dużych liter od A do Z
 let re = /[A-Z]/g;
-let pos = "jakiś Tekst".search(re); //6 
+let pos11 = "jakiś Tekst".search(re); //6 
 
 
 // trim
@@ -91,9 +91,9 @@ let lowCase = upCase.toLowerCase(); // lowerCase = "pewien tekst."
 
 // concat - łączenie tekstow (alternaytywa to +)
 
-let a = "tekst1"; //"tekst1"
-let b = a.concat(" tekst2"); // "tekst1 tekst2"
-var c = b.concat(" tekst3").concat(" tekst4"); //tekst1 tekst2 tekst3 tekst4
+let a1 = "tekst1"; //"tekst1"
+let b1 = a1.concat(" tekst2"); // "tekst1 tekst2"
+var c = b1.concat(" tekst3").concat(" tekst4"); //tekst1 tekst2 tekst3 tekst4
 
 
 // slice(start, end) - pobiera fragment stringa
@@ -121,12 +121,12 @@ var r = str7.substr(-3); // ta. - ujemny argument, liczy od końca
 
 
 // split - dzieli string ze względu na podany tekst i zachowuje wynik w postaci tablicy
-var str8 = "A B C D 1 2 3 4";
+var str8 = "A B C D 1 2 3 4 a";
 var data = str8.split(" ");
-console.log(data.length); // 8
+console.log("dlugosc tzn ilosc znaków =",data.length); // 8
 console.log(data[2]); // c 
  
-var str9 = "Skoda|Oktawia|2012";
+var str9 = "Skoda|Oktawia|2012|VV";
 var carDetails = str9.split("|"); // podział przez | czyli pipe
 console.log(carDetails[1]); //Octawia
 
@@ -135,6 +135,7 @@ console.log(carDetails[1]); //Octawia
 var txt6 = "Html CSS JavaScript PHP Python Sql";
 // aby zignorowac wielkość znaków nalezy uzyć /i (insensitive)
 var langs = txt6.replace(/sql/i, "MongoDB");
+var langs = txt6.replace(/mongodb/i, "dodane słowo w jezyku");
 console.log(langs); // "Html CSS JavaScript PHP Python MongoDB";
 
 // Wyszukanie dowolnych znaków z zakresu dzięki [A-Z] oraz podmiana na literę X

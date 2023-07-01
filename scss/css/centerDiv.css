@@ -1,0 +1,19 @@
+.container {
+  /* width: 200px;
+    border: 1px solid red;
+    display: flex; */
+    justify-content: center;
+    align-items: center;
+  /* position: relative; */
+  
+
+}
+.item {width: 200px;background-color:gray;
+    height: 200px;
+  position: absolute;
+  left: 50%;
+
+  right: 50%;
+  transform: translate(-50%,100%);
+  border: 1px solid green;
+}

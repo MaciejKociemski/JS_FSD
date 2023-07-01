@@ -19,12 +19,12 @@
 
 //Tworzenie tablicy - tablica jako literał tablicowy:
 var a = [1, 2, "txt", ["a","b"]];
-
+console.info(a)
 //Tworzenie tablicy - za pomocą funkcji konstruktora i operatora new
 var b = new Array(10, 4, "txt");
 // jeśli pominiemy new to kostruktor zachowa się jakby tam bylo new i stworzy tablice
 var c = Array(10, 4, "txt");
-
+console.info(12121212)
 // UWAGA - jeśli przekażemy jako zawartość tablicy tylko jedna liczbe, to stworzy pusta tablice o długości tej podanej liczby
 var d = Array(5); // [empty x 5]
 
@@ -77,7 +77,7 @@ for (let i=0; i<arr.length; i++ ) { // początkowy index = 0;  maksymalna wielko
 // 99
 
 // INTERACJA TABLICY Z FOREACH - ta opcja ma przewagę, bo nie pokazuje usunietych elementow w ogole, a for pokazuje je jako undefinied
-var arr2 = ["jabłko", "gruszka", "kiwi"];
+var arr2 = ["jabłko", "gruszka", "kiwi","mango","limonka"];
 
 arr2.forEach(function(item, index, array) {
     console.log(index, item);
