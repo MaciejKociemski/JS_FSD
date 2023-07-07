@@ -17,7 +17,7 @@
       if ("1" + 0 == "10") console.log("true, liczba 0 na string"); // wykona sie
       if (1 + "0" === "10") console.log("true, liczba 1 na string"); // wykona sie
       //string na liczbe
-      if (10 - "4" === 6) console / log("wykona się"); // wykona sie
+      if (10 - "4" === 6) console.log("wykona się"); // wykona sie
       let c = "" + 111; // "111"
       let g = +"24"; // 24
       let h = -"67"; // -67
@@ -55,7 +55,7 @@
       let i = parseInt("0", 10); // i = 0
       let f = parseFloat("3,45"); // f = 3.45
       // na boolean
-      Boolean("true"); // true
+      console.log(Boolean("true")); // true
       Boolean("false"); // true
       Boolean("1"); // true
       Boolean("0"); // true
@@ -64,7 +64,7 @@
       Boolean({}); // true
       Boolean([]); // true
       Boolean(0); // false
-      Boolean(""); // false
+      console.log(Boolean("")); // false
       Boolean(null); // false
       Boolean(undefined); // false
 

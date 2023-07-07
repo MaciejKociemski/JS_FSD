@@ -11,8 +11,17 @@
 
 <body>
     <script>
+
+        // console.log(xx)
+        let xx = 5;
+        console.log(xx)
+
+        sayHello();
+        function sayHello(){
+            console.log("hello")
+        }
        
-//HOISTING -przeniesienie wszytskich deklaracji zmiennych oraz funkcji na poczatek funkcji, ale przypisania pozostaja na swoim miejscu
+//HOISTING -przeniesienie wszystkich deklaracji zmiennych oraz funkcji na poczatek funkcji, ale przypisania pozostaja na swoim miejscu
 
 function test() {
     console.log(data); //undefined
@@ -53,7 +62,7 @@ function test2(a,b) {
 
 // WYJATEK - wyrazenia funkcyjne
 
-exprTest(5,4); // uncaught TypeError: exprTest is not a function
+// exprTest(5,4); // uncaught TypeError: exprTest is not a function
 
 var exprTest = function(a,b) {
     console.log("Wynik: " + (a * b));

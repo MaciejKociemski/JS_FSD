@@ -18,6 +18,7 @@
 
 //Tworzenie literału obiektu
 var o = {}; //pusty obiekt
+console.log(o)
 typeof o; //"object"
 
 var arr2 = [10,20, "c"]; // literał tablicowy
@@ -30,7 +31,7 @@ var rect = {x:10, y:0, width:100, height:200};
 // preferowana metoda tworzenia obiektu
 var car = {
     name: "Chevrolet",
-    model: "Mako Shark",
+    model: "Mako Shark ",
     year: 1965,
     details: {
         type: "concept car",
@@ -40,7 +41,7 @@ var car = {
         console.log(this.name, this.model, this.details.type);
     }
 }
-
+console.log(car.name,car.year)
 //Funkcje konstruujace
 //obiekty mozna stworzyc rowniez za pomoca funkcji konstruujacych oraz new 
 
@@ -80,6 +81,9 @@ let person = {name:"andy", age: 30};
 
 var person2 = Object.create(person);
 console.log(person2.name); // andy
+console.log(person2.age); // 30
+console.log(person2.age,person2.name); // 30, andy
+console.log(person2.name,person2.age); // andy, 30
 
 let obiekt = Object.create(null); //tworzy nowy obiekt bez prototypu
 
@@ -91,14 +95,14 @@ var obj3 = {
     } 
 };
 
-obj.log(); //test 10
-console.log(obj3.name); // test
-console.log(obj3["size"]); // 10
-obj["log"](); // test 10
+// obj.log(); //test 10
+// console.log(obj3.name); // test
+// console.log(obj3["size"]); // 10
+// obj["log"](); // test 10
 
-obj3.codeName = "XP"; //dodanie nowej wlasciwosci
-obj["codeName"] = "GD"; // zmiana wlasciwosci
-delete obj3.name; // skasowanie wlasciwosci
+// obj3.codeName = "XP"; //dodanie nowej wlasciwosci
+// obj["codeName"] = "GD"; // zmiana wlasciwosci
+// delete obj3.name; // skasowanie wlasciwosci
 
 //SPRAWDZANIE ISTNIENIA WLASCIWOSCI
 // dostepny jest operator in oraz funkcja hasOwnProperty()
@@ -107,8 +111,10 @@ var samolot = { name: "BlackBird", brand: "Lockhead"};
 
 if ("name" in samolot) console.log(samolot.name); // BlackBird
 if ("model" in samolot) console.log(samolot.model); // nie wykona sie
+if ("brand" in samolot) console.log(samolot.brand); // Lockhead
 
 if (plane.hasOwnProperty("brand")) console.log(samolot.brand); //Lockhead
+if (plane.hasOwnProperty("name")) console.log(samolot.name); //BlackBird
 
 // obiekty przekazywane sa przez referencje
 var obj4 = { num:5}
@@ -121,7 +127,7 @@ console.log(obj4 === data4); //true
 const z = { data: 10}
 z.data = 20; 
 console.log(z.data); //20
-z = {info:99} // błąd Assignment to constant variable
+// z = {info:99} // błąd Assignment to constant variable
 
 
 
@@ -169,6 +175,7 @@ for (let i = 0; i < objKeys.length; i++) {
     */
 
 //Object.entries() - od ES8, zwraca tablicę par włąściwosci i wartości danego obiektu, bez dziedziczonych
+
 const objEntries = Object.entries(obj6);
 
 for([key, value] of objEntries) {
@@ -187,11 +194,12 @@ for([key, value] of objEntries) {
 const source = {a:1, b:2, c:3};
 let clone = {info: "txt"}
 let result = Object.assign(clone, source);
+console.log(source,clone,result)
 
 clone; // {info: 'txt', a: 1, b: 2, c: 3}
 result; // {info: 'txt', a: 1, b: 2, c: 3}
 clone === result // true -> TEN SAM OBIEKT
-
+console.log(clone === result)
 //PRZYPADEK2    
 const source2 = { a: 1, b: 2, obj: {c:3}};
 let clone2 = { info: "txt" }
@@ -237,11 +245,14 @@ const user = {
         }
     },
     get name() {
-        return this_userName;
+        return  this._userName;
+       
     }
 }
+console.log(user)
 
 user.name = "marek" // z malej litery
+user.name = "john" // z malej litery
 console.log(user.name); // z dużej litery
 
 //defineProperty - pozwala na zdefiniowanie wlasciwosci w obiekcie

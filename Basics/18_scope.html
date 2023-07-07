@@ -54,7 +54,7 @@
         );
       }
       test("ma"); // Ala ma kota
-      console.log(txt); //undefined (nie ma do niej dostepu bo w ciele funkcji)
+      // console.log(txt); //undefined (nie ma do niej dostepu bo w ciele funkcji)
 
       // PRZESLONIECIE ZMIENNYCH GLOBALNYCH W FUNKCJI
       //takie same nazwy lokalnych zmiennych w funkcji przeslaniaja nazwy zmiennych globalnych
@@ -62,7 +62,7 @@
       var someData = 99; // globalna someData
       function test() {
         var someData = 1000; // lokalnie zmienna someData
-        console.log("lokalnie someData: " + somedata);
+        console.log("lokalnie someData: " + someData);
         console.log("globalnie someData: " + window.someData);
       }
 
@@ -126,7 +126,7 @@
       if (1 == 1) {
         let letData = 8;
       }
-      console.log(letData); //VM2310:5 Uncaught ReferenceError: letData is not defined
+      // console.log(letData); //VM2310:5 Uncaught ReferenceError: letData is not defined
 
       {
         var x = 7;
@@ -136,7 +136,7 @@
       {
         const y = 9;
       }
-      console.log(y); //VM2310:5 Uncaught ReferenceError: y is not defined
+      // console.log(y); //VM2310:5 Uncaught ReferenceError: y is not defined
 
       for (let i = 0; i < 5; i++) {
         //jakies dzialania
